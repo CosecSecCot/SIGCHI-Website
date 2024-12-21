@@ -1,4 +1,5 @@
 import Button from "./components/Button";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import ArrowRight from "/Arrow - Right.svg";
 
@@ -6,7 +7,7 @@ export default function App() {
     return (
         <>
             <Navbar />
-            <main className="barlow-regular">
+            <main className="barlow-regular pb-10">
                 <article className="w-full h-full relative overflow-hidden">
                     <section className="absolute top-[99px] left-12 flex flex-col gap-8 mx-10">
                         <div className="flex flex-col gap-2">
@@ -89,6 +90,7 @@ export default function App() {
                     </div>
                 </article>
             </main>
+            <Footer />
         </>
     );
 }
