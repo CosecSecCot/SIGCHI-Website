@@ -64,7 +64,7 @@ const WhatIsGoingOn = () => {
         <div className="flex items-center gap-6">
           <div className="text-blue-600 text-4xl font-bold">02</div>
           <div className="flex-1">
-            <h2 className="text-xl font-regular Barlow Condensed">
+            <h2 className="text-xl barlow-regular ">
               Design Workshops <br />
               <span className="text-blue-600">at IIIT Delhi</span>
             </h2>
@@ -84,7 +84,45 @@ const WhatIsGoingOn = () => {
         </div>
         <hr className="border-t border-gray-1A090D" />
       </div>
+      {/* New Section: ACM SIGCHI */}
+      <div className="mt-16 flex flex-col md:flex-row items-center gap-8">
+        {/* Text Section */}
+        <div className="flex-1">
+          <h2 className="text-5xl barlow-regular font-bold text-gray-900">
+            What is ACM <span className="text-blue-600">SIGCHI</span>
+          </h2>
+          <p className="text-gray-600 mt-4 barlow-regular">
+            Special Interest Group on Computer Human Interaction (SIGCHI) is the
+            premier <br/>international society for professionals, academics, and
+            students who are<br/> interested in human-technology and human-computer
+            interaction (HCI).
+          </p><br/>
+          <p className="text-gray-600 mt-2 barlow-regular">
+            SIGCHI provides a forum for the discussion of all aspects of HCI
+            through their<br/> conferences, publications, websites, email discussion
+            groups, and other<br/> services.
+          </p>
+          <button className="mt-6 px-4 py-2 agdasima-regular border border-blue-600 text-blue-600 bg-white font-semibold rounded-md shadow-md hover:bg-blue-100">
+            Learn More →
+          </button>
+        </div>
+
+        {/* SVG/Graphic Section */}
+        <div className="relative flex-1 flex justify-end">
+        <svg width="426" height="461" viewBox="0 0 426 461" fill="none" xmlns="http://www.w3.org/2000/svg" className="mt-8">
+<rect x="46" y="25" width="361" height="350" rx="6" fill="#1A36C0"/>
+<rect y="271" width="234" height="168" rx="6" fill="black"/>
+<path opacity="0.4" d="M64 459.5H241.5C247.575 459.5 252.5 454.575 252.5 448.5V407.5C252.5 401.425 257.425 396.5 263.5 396.5H414C420.075 396.5 425 391.575 425 385.5V263" stroke="#1A090D" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 8"/>
+<path opacity="0.4" d="M22 64V12C22 5.92487 26.9249 1 33 1H194.5" stroke="#1A090D" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 8"/>
+</svg>
+
+          
+        </div>
+      </div>
     </section>
+   
+      
+   
   );
 };
 

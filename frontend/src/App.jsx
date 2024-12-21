@@ -95,6 +95,7 @@ export default function App() {
 
                     {/* "What is Going On" Section */}
                     <WhatIsGoingOn />
+                    
                 </article>
             </main>
             <Footer />
