@@ -1,28 +1,44 @@
+import Button from "./components/Button";
 import Navbar from "./components/Navbar";
+import ArrowRight from "/Arrow - Right.svg";
 
 export default function App() {
     return (
         <>
             <Navbar />
-            <main className="font-barlow">
-                <div className="w-full h-full relative overflow-hidden">
-                    <div className="absolute top-20 left-14 flex flex-col gap-2 mx-10">
-                        <h1 className="flex flex-col text-7xl h-full">
-                            Redefining the Way
-                            <span>
-                                <span className="barlow-condensed-extralight-italic text-[#1a36c0]">
-                                    Humans
-                                </span>{" "}
-                                and Technology Connect
-                            </span>
-                        </h1>
-                        <h2 className="font-extralight text-4xl w-[45%]">
-                            We are a collective of diverse thinkers reimagining
-                            how human-technology interactions can be seamless
-                            and meaningful.
-                        </h2>
-                    </div>
-                    <div className="w-full mt-9">
+            <main className="barlow-regular">
+                <article className="w-full h-full relative overflow-hidden">
+                    <section className="absolute top-[99px] left-12 flex flex-col gap-8 mx-10">
+                        <div className="flex flex-col gap-2">
+                            <h1 className="flex flex-col text-[66px] leading-[79px] h-full">
+                                Redefining the Way
+                                <span>
+                                    <span className="barlow-condensed-extralight-italic text-persian-blue">
+                                        Humans
+                                    </span>{" "}
+                                    and Technology Connect
+                                </span>
+                            </h1>
+                            <h2 className="font-extralight text-[30px] leading-[34px] w-[45%]">
+                                We are a collective of diverse thinkers
+                                reimagining how human-technology interactions
+                                can be seamless and meaningful.
+                            </h2>
+                        </div>
+                        <Button>
+                            <div className="flex items-center gap-2">
+                                <span className="pt-[12px] pb-[16px]">
+                                    Learn More
+                                </span>
+                                <img
+                                    src={ArrowRight}
+                                    alt=""
+                                    className="pt-[16px] pb-[14px]"
+                                />
+                            </div>
+                        </Button>
+                    </section>
+                    <div className="w-full mt-[61px]">
                         <svg
                             width="833"
                             height="557"
@@ -71,7 +87,7 @@ export default function App() {
                             />
                         </svg>
                     </div>
-                </div>
+                </article>
             </main>
         </>
     );
