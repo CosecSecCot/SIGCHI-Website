@@ -2,6 +2,7 @@ import Button from "./components/Button";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import ArrowRight from "/Arrow - Right.svg";
+import WhatIsGoingOn from "./components/WhatIsGoingOn";
 
 export default function App() {
     return (
@@ -9,6 +10,7 @@ export default function App() {
             <Navbar />
             <main className="barlow-regular pb-10">
                 <article className="w-full h-full relative overflow-hidden">
+                    {/* Main Hero Section */}
                     <section className="absolute top-[99px] left-12 flex flex-col gap-8 mx-10">
                         <div className="flex flex-col gap-2">
                             <h1 className="flex flex-col text-[66px] leading-[79px] h-full">
@@ -33,12 +35,14 @@ export default function App() {
                                 </span>
                                 <img
                                     src={ArrowRight}
-                                    alt=""
+                                    alt="Arrow Right"
                                     className="pt-[16px] pb-[14px]"
                                 />
                             </div>
                         </Button>
                     </section>
+
+                    {/* SVG Background */}
                     <div className="w-full mt-[61px]">
                         <svg
                             width="833"
@@ -88,6 +92,9 @@ export default function App() {
                             />
                         </svg>
                     </div>
+
+                    {/* "What is Going On" Section */}
+                    <WhatIsGoingOn />
                 </article>
             </main>
             <Footer />
