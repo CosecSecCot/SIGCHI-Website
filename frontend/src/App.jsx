@@ -28,7 +28,7 @@ export default function App() {
                             </h2>
                         </div>
                         <Button>
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center gap-2 px-[28px]">
                                 <span className="pt-[12px] pb-[16px]">
                                     Learn More
                                 </span>

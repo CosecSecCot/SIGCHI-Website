@@ -21,8 +21,8 @@ export default function WhatIsACMSIGCHISection() {
                         aspects of HCI through their conferences, publications,
                         web sites, email discussion groups, and other services.
                     </p>
-                    <Button type="sm">
-                        <div className="flex items-center gap-2 text-[25px]">
+                    <Button>
+                        <div className="flex items-center gap-2 text-[25px] px-[25px]">
                             <span className="pt-[10px] pb-[13px]">
                                 Learn More
                             </span>
