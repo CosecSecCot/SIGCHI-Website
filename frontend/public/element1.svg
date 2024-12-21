@@ -1,0 +1,47 @@
+<svg
+    width="833"
+    height="557"
+    viewBox="0 0 833 557"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="relative w-full left-[20%]"
+>
+    <rect
+        x="160"
+        width="2000"
+        height="101"
+        rx="10"
+        fill="#1A36C0"
+    />
+    <rect
+        x="447"
+        y="114"
+        width="2000"
+        height="101"
+        rx="10"
+        fill="#1A36C0"
+    />
+    <rect
+        x="252"
+        y="228"
+        width="2000"
+        height="101"
+        rx="10"
+        fill="#1A36C0"
+    />
+    <rect
+        y="342"
+        width="2000"
+        height="101"
+        rx="10"
+        fill="#1A36C0"
+    />
+    <rect
+        x="380"
+        y="456"
+        width="2000"
+        height="101"
+        rx="10"
+        fill="#1A36C0"
+    />
+</svg>

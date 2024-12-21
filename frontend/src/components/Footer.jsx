@@ -2,7 +2,7 @@ import logo2 from "/logo2.svg";
 
 export default function Footer() {
     return (
-        <footer className="barlow-regular w-full bg-persian-blue text-white">
+        <footer className="font-barlow w-full bg-persian-blue text-white">
             <div className="flex flex-col w-full h-full px-20 py-10 gap-9">
                 <div className="flex justify-between border-b-2 border-white border-dashed border-opacity-40 pb-12">
                     <div className="grid grid-cols-3 gap-x-[66px] gap-y-1 text-[30px] leading-[36px] font-light">

@@ -1,22 +1,21 @@
 import Button from "./components/Button";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import ArrowRight from "/Arrow - Right.svg";
-import WhatIsGoingOn from "./components/WhatIsGoingOn";
+import WhatIsGoingOnSection from "./components/WhatIsGoingOn";
+import WhatIsACMSIGCHISection from "./components/WhatIsACMSIGCHI";
 
 export default function App() {
     return (
         <>
             <Navbar />
-            <main className="barlow-regular pb-10">
+            <main className="font-barlow pb-10">
                 <article className="w-full h-full relative overflow-hidden">
-                    {/* Main Hero Section */}
                     <section className="absolute top-[99px] left-12 flex flex-col gap-8 mx-10">
                         <div className="flex flex-col gap-2">
                             <h1 className="flex flex-col text-[66px] leading-[79px] h-full">
                                 Redefining the Way
                                 <span>
-                                    <span className="barlow-condensed-extralight-italic text-persian-blue">
+                                    <span className="font-extralight italic text-persian-blue">
                                         Humans
                                     </span>{" "}
                                     and Technology Connect
@@ -34,7 +33,7 @@ export default function App() {
                                     Learn More
                                 </span>
                                 <img
-                                    src={ArrowRight}
+                                    src="/Arrow - Right.svg"
                                     alt="Arrow Right"
                                     className="pt-[16px] pb-[14px]"
                                 />
@@ -42,7 +41,6 @@ export default function App() {
                         </Button>
                     </section>
 
-                    {/* SVG Background */}
                     <div className="w-full mt-[61px]">
                         <svg
                             width="833"
@@ -92,11 +90,9 @@ export default function App() {
                             />
                         </svg>
                     </div>
-
-                    {/* "What is Going On" Section */}
-                    <WhatIsGoingOn />
-                    
                 </article>
+                <WhatIsGoingOnSection />
+                <WhatIsACMSIGCHISection />
             </main>
             <Footer />
         </>

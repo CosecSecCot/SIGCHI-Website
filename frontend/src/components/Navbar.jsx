@@ -3,7 +3,7 @@ import logo1 from "/logo1.svg";
 export default function Navbar() {
     return (
         <header className="w-full px-9 py-8 z-50">
-            <nav className="nav-shadow px-11 py-4 flex justify-between barlow-regular items-center bg-white shadow-[#0000001a] rounded-xl">
+            <nav className="nav-shadow px-11 py-4 flex justify-between font-barlow items-center bg-white shadow-[#0000001a] rounded-xl">
                 <a href="" className="flex items-center gap-2">
                     <img src={logo1} alt="SIGCHI Logo" />
                     <span className="text-persian-blue text-3xl">

@@ -5,31 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.barlow-regular {
-    font-family: "Barlow Condensed", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.barlow-condensed-extralight-italic {
-    font-family: "Barlow Condensed", serif;
-    font-weight: 200;
-    font-style: italic;
-}
-
-.agdasima-regular {
-    font-family: "Agdasima", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.agdasima-bold {
-    font-family: "Agdasima", serif;
-    font-weight: 700;
-    font-style: normal;
-}
-
 .nav-shadow {
     filter: drop-shadow(#0000001a -10px 6px 24px)
 }
