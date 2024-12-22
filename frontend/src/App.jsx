@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import WhatIsGoingOnSection from "./components/WhatIsGoingOn";
 import WhatIsACMSIGCHISection from "./components/WhatIsACMSIGCHI";
+import ExpressYourIdeasSection from "./components/ExpressYourIdeas";
 
 export default function App() {
     return (
@@ -93,6 +94,7 @@ export default function App() {
                 </article>
                 <WhatIsGoingOnSection />
                 <WhatIsACMSIGCHISection />
+                <ExpressYourIdeasSection />
             </main>
             <Footer />
         </>
