@@ -49,6 +49,7 @@ export default function ExpressYourIdeasSection() {
                         <input
                             id="email"
                             name="email"
+                            autoComplete="email"
                             placeholder="Enter Email..."
                             className="border-2 border-persian-blue rounded-[4px] outline-none py-[17px] px-[24px] text-[20px] leading-[25px]"
                             {...register("email", {

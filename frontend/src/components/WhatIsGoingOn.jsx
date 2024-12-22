@@ -21,7 +21,7 @@ const events = [
 
 export default function WhatIsGoingOnSection() {
     return (
-        <article className="mt-6 px-20">
+        <article className="mt-6 min-[1220px]:mt-[180px] px-20">
             <div className="flex justify-center">
                 <img src="/what-is-going-on.svg" alt="What Is Going On" />
             </div>
