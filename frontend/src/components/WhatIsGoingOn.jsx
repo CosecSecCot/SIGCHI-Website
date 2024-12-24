@@ -21,11 +21,15 @@ const events = [
 
 export default function WhatIsGoingOnSection() {
     return (
-        <article className="mt-6 min-[1220px]:mt-[180px] px-20">
+        <article className="mt-6 min-[1220px]:mt-[180px]">
             <div className="flex justify-center">
-                <img src="/what-is-going-on.svg" alt="What Is Going On" />
+                <img
+                    src="/what-is-going-on.svg"
+                    alt="What Is Going On"
+                    className="h-[101px] sm:h-[203px] w-auto object-cover"
+                />
             </div>
-            <div className="mt-10 space-y-8">
+            <div className="mt-10 space-y-8 px-[30px] sm:px-[80px]">
                 {events.map((event, idx) => {
                     return (
                         <HighlightCard
@@ -65,7 +69,7 @@ function HighlightCard({
 }) {
     return (
         <div
-            className={`font-barlow flex justify-between gap-3 sm:gap-10 ${border ? "border-b-2 border-black border-opacity-20" : ""} pb-[45px]`}
+            className={`font-barlow flex justify-between gap-3 sm:gap-10 ${border ? "border-b sm:border-b-2 border-black border-opacity-20" : ""} pb-[16px] sm:pb-[45px]`}
         >
             <div className="flex sm:gap-[51px]">
                 <div className="flex gap-[29px]">
@@ -81,7 +85,7 @@ function HighlightCard({
                         </span>
                     </div>
                 </div>
-                <p className="font-extralight text-[26px] w-[50%] hidden sm:block">
+                <p className="font-extralight text-[26px] w-[50%] hidden lg:block">
                     {description}
                 </p>
             </div>

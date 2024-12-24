@@ -1,5 +1,3 @@
-import Button from "./Button";
-
 export default function WhatIsACMSIGCHISection() {
     return (
         <article className="mt-[76px] px-[30px] sm:px-[80px]">

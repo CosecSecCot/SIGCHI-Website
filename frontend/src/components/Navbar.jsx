@@ -1,5 +1,24 @@
 import { useState } from "react";
 
+const links = [
+    {
+        title: "ABOUT",
+        href: "",
+    },
+    {
+        title: "EVENTS & WORKSHOPS",
+        href: "",
+    },
+    {
+        title: "RESOURCES",
+        href: "",
+    },
+    {
+        title: "CONTACT US",
+        href: "",
+    },
+];
+
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
@@ -18,10 +37,13 @@ export default function Navbar() {
                     </span>
                 </a>
                 <div className="lg:flex gap-11 text-2xl hidden">
-                    <a href="">ABOUT</a>
-                    <a href="">EVENTS &amp; WORKSHOPS</a>
-                    <a href="">RESOURCES</a>
-                    <a href="">CONTACT US</a>
+                    {links.map((link, idx) => {
+                        return (
+                            <a href={link.href} key={idx}>
+                                {link.title}
+                            </a>
+                        );
+                    })}
                 </div>
                 <button
                     className="flex justify-end lg:hidden"
@@ -38,13 +60,16 @@ export default function Navbar() {
                         <img src="/Cross.svg" alt="exit" />
                     </button>
                 </div>
-                <div className="mt-[66px] flex flex-col items-center gap-[96px]">
-                    <div className="flex flex-col items-center gap-[34px] text-[32px] text-white font-medium text-opacity-90">
+                <div className="flex flex-col items-center justify-around h-[70vh] gap-8">
+                    <div className="flex flex-col items-center gap-[17px] text-[32px] text-white font-medium text-opacity-90">
                         <a href="">HOME</a>
-                        <a href="">ABOUT US</a>
-                        <a href="">EVENTS &amp; WORKSHOPS</a>
-                        <a href="">RESOURCES</a>
-                        <a href="">CONTACT US</a>
+                        {links.map((link, idx) => {
+                            return (
+                                <a href={link.href} key={idx}>
+                                    {link.title}
+                                </a>
+                            );
+                        })}
                     </div>
                     <img
                         src="/logo2.svg"

@@ -7,6 +7,9 @@ export default function ExpressYourIdeasSection() {
         formState: { errors, isSubmitting },
     } = useForm();
 
+    /**
+     * Prints out form data in console after 1 second of delay (to simulate network delay).
+     * */
     const onSubmit = async (data) => {
         await new Promise((resolve) => {
             setTimeout(() => {
@@ -17,7 +20,7 @@ export default function ExpressYourIdeasSection() {
     };
 
     return (
-        <article className="font-barlow my-[56px] sm:my-[76px] px-[30px] sm:px-[80px] flex flex-col lg:flex-row justify-between gap-[20px] lg:gap-24">
+        <article className="font-barlow my-[56px] sm:my-[76px] px-[30px] sm:px-[80px] flex flex-col lg:flex-row lg:justify-between gap-[20px] lg:gap-24">
             <section className="space-y-[11px]">
                 <h2 className="text-[35px] leading-[42px] sm:text-[66px] sm:leading-[79px]">
                     Express Your{" "}
