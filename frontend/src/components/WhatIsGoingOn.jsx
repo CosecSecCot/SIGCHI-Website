@@ -65,25 +65,27 @@ function HighlightCard({
 }) {
     return (
         <div
-            className={`font-barlow flex justify-between gap-10 ${border ? "border-b-2 border-black border-opacity-20" : ""} pb-[45px]`}
+            className={`font-barlow flex justify-between gap-3 sm:gap-10 ${border ? "border-b-2 border-black border-opacity-20" : ""} pb-[45px]`}
         >
-            <div className="flex gap-[51px]">
+            <div className="flex sm:gap-[51px]">
                 <div className="flex gap-[29px]">
-                    <div className="font-agdasima text-persian-blue text-[45px] leading-none">
+                    <div className="font-agdasima text-persian-blue text-[19px] sm:text-[45px] leading-none">
                         {number}
                     </div>
                     <div>
-                        <h2 className="text-[48px] leading-none">{title}</h2>
-                        <span className="text-persian-blue text-[30px]">
+                        <h2 className="text-[20px] sm:text-[48px] leading-none">
+                            {title}
+                        </h2>
+                        <span className="text-persian-blue text-[13px] sm:text-[30px]">
                             {subtitle}
                         </span>
                     </div>
                 </div>
-                <p className="font-extralight text-[26px] w-[50%]">
+                <p className="font-extralight text-[26px] w-[50%] hidden sm:block">
                     {description}
                 </p>
             </div>
-            <div>
+            <div className="w-[35%] sm:w-auto">
                 <img src={image} alt={title} className="" />
             </div>
         </div>

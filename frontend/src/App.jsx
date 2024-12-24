@@ -10,9 +10,9 @@ export default function App() {
             <Navbar />
             <main className="font-barlow pb-10">
                 <article className="w-full">
-                    <section className="flex flex-col gap-8 w-fit pl-[81px] pt-[67px]">
+                    <section className="flex flex-col gap-[20px] sm:gap-8 w-fit pl-[31px] pt-[8px] sm:pl-[81px] sm:pt-[67px]">
                         <div className="flex flex-col gap-2">
-                            <h1 className="flex flex-col text-[66px] leading-[79px]">
+                            <h1 className="flex flex-col text-[36px] leading-[43px] sm:text-[66px] sm:leading-[79px] w-[90%]">
                                 Redefining the Way
                                 <span>
                                     <span className="font-extralight italic text-persian-blue">
@@ -21,20 +21,18 @@ export default function App() {
                                     and Technology Connect
                                 </span>
                             </h1>
-                            <h2 className="font-extralight text-[30px] leading-[34px] w-[45%]">
+                            <h2 className="font-extralight text-[16px] leading-[21px] sm:text-[30px] sm:leading-[34px] w-[60%] sm:w-[45%]">
                                 We are a collective of diverse thinkers
                                 reimagining how human-technology interactions
                                 can be seamless and meaningful.
                             </h2>
                         </div>
-                        <button className="font-agdasima w-fit h-fit flex items-center gap-2 px-[28px] text-3xl bg-white border-[2px] border-persian-blue text-persian-blue rounded-md">
-                            <span className="pt-[12px] pb-[16px]">
-                                Learn More
-                            </span>
+                        <button className="font-agdasima w-fit h-fit flex items-center gap-2 px-[17px] py-[9px] sm:px-[28px] sm:py-[14px] text-[18px] sm:text-[30px] bg-white border-[1.5px] sm:border-[2px] border-persian-blue text-persian-blue rounded-md">
+                            <span>Learn More</span>
                             <img
                                 src="/Arrow - Right.svg"
-                                alt="Arrow Right"
-                                className="pt-[16px] pb-[14px]"
+                                alt=""
+                                className="w-[20px] sm:w-auto h-auto"
                             />
                         </button>
                     </section>

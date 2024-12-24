@@ -8,3 +8,7 @@
 .nav-shadow {
     filter: drop-shadow(#0000001a -10px 6px 24px)
 }
+
+.nav-shadow-small {
+    filter: drop-shadow(#0000001a 0px 0px 23px)
+}

@@ -17,13 +17,13 @@ export default function ExpressYourIdeasSection() {
     };
 
     return (
-        <article className="font-barlow my-[76px] px-20 flex justify-between gap-24">
+        <article className="font-barlow my-[56px] sm:my-[76px] px-[30px] sm:px-[80px] flex flex-col lg:flex-row justify-between gap-[20px] lg:gap-24">
             <section className="space-y-[11px]">
-                <h2 className="text-[66px] leading-[79px]">
+                <h2 className="text-[35px] leading-[42px] sm:text-[66px] sm:leading-[79px]">
                     Express Your{" "}
                     <span className="text-persian-blue">Ideas</span>
                 </h2>
-                <p className="mb-6 font-extralight text-[26px] leading-[34px] w-[60%] xl:w-[50%]">
+                <p className="mb-6 font-extralight text-[16px] leading-[21px] sm:text-[26px] sm:leading-[34px] w-[80%] sm:w-[60%] xl:w-[50%]">
                     SIGCHI provides a forum for the discussion of all aspects of
                     HCI through their conferences, publications, web sites,
                     email discussion groups, and other services.
@@ -37,7 +37,7 @@ export default function ExpressYourIdeasSection() {
                     <div className="flex flex-col gap-[5px]">
                         <label
                             htmlFor="email"
-                            className="flex justify-end text-persian-blue text-[34px] leading-[41px]"
+                            className="flex lg:justify-end text-persian-blue text-[18px] leading-[21px] sm:text-[34px] sm:leading-[41px]"
                         >
                             Email ID
                         </label>
@@ -51,7 +51,7 @@ export default function ExpressYourIdeasSection() {
                             name="email"
                             autoComplete="email"
                             placeholder="Enter Email..."
-                            className="border-2 border-persian-blue rounded-[4px] outline-none py-[17px] px-[24px] text-[20px] leading-[25px]"
+                            className="border sm:border-2 border-persian-blue rounded-[4px] outline-none px-[12px] py-[8px] sm:py-[17px] sm:px-[24px] text-[11px] leading-[13px] sm:text-[20px] sm:leading-[25px]"
                             {...register("email", {
                                 required: {
                                     value: true,
@@ -67,7 +67,7 @@ export default function ExpressYourIdeasSection() {
                     <div className="flex flex-col gap-[5px]">
                         <label
                             htmlFor="description"
-                            className="flex justify-end text-persian-blue text-[34px] leading-[41px]"
+                            className="flex lg:justify-end text-persian-blue text-[18px] leading-[21px] sm:text-[34px] sm:leading-[41px]"
                         >
                             Description
                         </label>
@@ -80,7 +80,7 @@ export default function ExpressYourIdeasSection() {
                             id="description"
                             name="description"
                             placeholder="Enter Description..."
-                            className="h-[175px] border-2 border-persian-blue rounded-[4px] outline-none py-[17px] px-[24px] text-[20px] leading-[25px]"
+                            className="h-[91px] sm:h-[175px] border sm:border-2 border-persian-blue rounded-[4px] outline-none px-[12px] py-[8px] sm:py-[17px] sm:px-[24px] text-[11px] leading-[13px] sm:text-[20px] sm:leading-[25px]"
                             {...register("description", {
                                 required: {
                                     value: true,
@@ -89,22 +89,20 @@ export default function ExpressYourIdeasSection() {
                             })}
                         />
                     </div>
-                    <div className="flex justify-end">
+                    <div className="flex lg:justify-end">
                         <button
                             type="submit"
                             disabled={isSubmitting}
-                            className="font-agdasima w-fit h-fit text-3xl bg-white border-[2px] border-persian-blue text-persian-blue rounded-md disabled:opacity-30"
+                            className="font-agdasima w-fit h-fit flex items-center gap-2 px-[17px] py-[9px] sm:px-[28px] sm:py-[14px] text-[18px] sm:text-[30px] bg-white border-[1px] sm:border-[2px] border-persian-blue text-persian-blue rounded-md disabled:opacity-30"
                         >
-                            <div className="flex gap-2 px-[25px]">
-                                <span className="text-[27px] pt-[10px] pb-[15px]">
-                                    Submit
-                                </span>
+                            <div className="flex gap-2">
+                                <span>Submit</span>
                                 <img
                                     src="/Arrow - Right.svg"
                                     alt=""
                                     width={30}
                                     height={30}
-                                    className="pt-[14px] pb-[12px]"
+                                    className="w-[20px] sm:w-auto h-auto"
                                 />
                             </div>
                         </button>

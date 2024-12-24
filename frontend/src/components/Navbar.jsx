@@ -4,15 +4,15 @@ export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <header className="w-full px-9 py-8 font-barlow">
-            <nav className="nav-shadow px-4 md:px-11 py-4 flex justify-between items-center bg-white shadow-[#0000001a] rounded-xl">
+        <header className="w-full px-4 sm:px-9 py-8 font-barlow">
+            <nav className="nav-shadow-small sm:nav-shadow px-4 sm:px-11 py-4 flex justify-between items-center bg-white shadow-[#0000001a] rounded-xl">
                 <a href="" className="flex items-center gap-2 flex-shrink-0">
                     <img
                         src="/logo1.svg"
                         alt="SIGCHI Logo"
-                        className="w-[32px] h-[33px] md:w-auto md:h-auto"
+                        className="w-[32px] h-[33px] sm:w-auto sm:h-auto"
                     />
-                    <span className="text-persian-blue text-[24px] md:text-[30px]">
+                    <span className="text-persian-blue text-[24px] sm:text-[30px]">
                         IIITD SIG{" "}
                         <span className="font-bold text-persian-blue">CHI</span>
                     </span>
