@@ -1,8 +1,14 @@
-import { useState } from "react";
+import gsap from 'gsap';
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
 
 const links = [
     {
-        title: "ABOUT",
+        title: "ABOUT US",
+        href: "",
+    },
+    {
+        title: "MEMBERS",
         href: "",
     },
     {
@@ -20,7 +26,53 @@ const links = [
 ];
 
 export default function Navbar() {
-    const [menuOpen, setMenuOpen] = useState(false);
+    // const [menuOpen, setMenuOpen] = useState(false);
+    const overlayRef = useRef();
+
+    const { contextSafe } = useGSAP({scope: overlayRef});
+
+    const onMenuOpen = contextSafe(() => {
+        const timeline = gsap.timeline();
+        timeline.to(
+            overlayRef.current,
+            {
+                y: "0%",
+                duration: 0.5,
+                ease: "power4.out"
+            }
+        );
+
+        timeline.fromTo(
+            ".navlink",
+            { opacity: 0, y: 30 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 0.5,
+                ease: "power3.out",
+                stagger: 0.1,
+            },
+            "-=0.5"
+        )
+
+        timeline.fromTo(
+            ".navlogo-large",
+            { opacity: 0, scale: 0.8 },
+            { opacity: 1, scale: 1, duration: 0.5, ease: "power4" },
+            "-=0.6"
+        );
+    })
+
+    const onMenuClose = contextSafe(() => {
+        gsap.to(
+            overlayRef.current,
+            {
+                y: "-100%",
+                ease: "power4.in",
+                duration: 0.4
+            }
+        );
+    });
 
     return (
         <header className="w-full px-4 sm:px-9 py-8 font-barlow">
@@ -47,25 +99,26 @@ export default function Navbar() {
                 </div>
                 <button
                     className="flex justify-end lg:hidden"
-                    onClick={() => setMenuOpen(true)}
+                    onClick={onMenuOpen}
                 >
                     <img src="/Hamburger.svg" alt="menu" />
                 </button>
             </nav>
             <div
-                className={`fixed z-50 top-0 left-0 w-full h-full bg-persian-blue ${menuOpen ? "" : "hidden"}`}
+                ref={overlayRef}
+                className="fixed z-50 top-0 left-0 w-full h-full bg-persian-blue translate-y-[-100%]"
             >
                 <div className="flex justify-end p-4">
-                    <button className="" onClick={() => setMenuOpen(false)}>
+                    <button className="" onClick={onMenuClose}>
                         <img src="/Cross.svg" alt="exit" />
                     </button>
                 </div>
                 <div className="flex flex-col items-center justify-around h-[70vh] gap-8">
                     <div className="flex flex-col items-center gap-[17px] text-[32px] text-white font-medium text-opacity-90">
-                        <a href="">HOME</a>
+                        <a href="" className="navlink">HOME</a>
                         {links.map((link, idx) => {
                             return (
-                                <a href={link.href} key={idx}>
+                                <a href={link.href} key={idx} className="navlink">
                                     {link.title}
                                 </a>
                             );
@@ -76,6 +129,7 @@ export default function Navbar() {
                         alt="IIITD SIG CHI"
                         width={160}
                         height={164}
+                        className='navlogo-large'
                     />
                 </div>
             </div>
