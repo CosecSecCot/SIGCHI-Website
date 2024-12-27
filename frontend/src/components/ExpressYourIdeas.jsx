@@ -102,7 +102,7 @@ export default function ExpressYourIdeasSection() {
                                 viewBox="0 0 34 34"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="relative w-[1.25rem] sm:w-auto h-auto stroke-persian-blue sm:group-hover:stroke-white"
+                                className={`relative w-[1.25rem] sm:w-auto h-auto stroke-persian-blue ${isSubmitting ? "" : "sm:group-hover:stroke-white"}`}
                             >
                                 <path
                                     d="M27.9792 16.6112H6.72925"
