@@ -1,11 +1,12 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
+import { Link } from "react-router";
 
 const links = [
     {
         title: "ABOUT US",
-        href: "",
+        href: "/about",
     },
     {
         title: "MEMBERS",
@@ -87,7 +88,7 @@ export default function Navbar() {
     return (
         <header className="w-full px-4 sm:px-9 py-8 font-barlow">
             <nav className="nav-shadow-small sm:nav-shadow px-4 sm:px-11 py-4 flex justify-between items-center bg-white shadow-[#0000001a] rounded-xl">
-                <a href="" className="flex items-center gap-2 flex-shrink-0">
+                <Link to="/" className="flex items-center gap-2 flex-shrink-0">
                     <img
                         src="/logo1.svg"
                         alt="SIGCHI Logo"
@@ -97,13 +98,13 @@ export default function Navbar() {
                         IIITD SIG{" "}
                         <span className="font-bold text-persian-blue">CHI</span>
                     </span>
-                </a>
+                </Link>
                 <div className="lg:flex gap-11 text-2xl hidden">
                     {links.map((link, idx) => {
                         return (
-                            <a href={link.href} key={idx}>
+                            <Link to={link.href} key={idx}>
                                 {link.title}
-                            </a>
+                            </Link>
                         );
                     })}
                 </div>
@@ -125,18 +126,18 @@ export default function Navbar() {
                 </div>
                 <div className="flex flex-col items-center justify-around h-[70vh] gap-8">
                     <div className="flex flex-col items-center gap-[17px] text-[32px] text-white font-medium text-opacity-90">
-                        <a href="" className="navlink">
+                        <Link to="/" className="navlink">
                             HOME
-                        </a>
+                        </Link>
                         {links.map((link, idx) => {
                             return (
-                                <a
-                                    href={link.href}
+                                <Link
+                                    to={link.href}
                                     key={idx}
                                     className="navlink"
                                 >
                                     {link.title}
-                                </a>
+                                </Link>
                             );
                         })}
                     </div>

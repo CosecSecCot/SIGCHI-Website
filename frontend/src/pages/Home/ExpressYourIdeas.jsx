@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import Button from "./Button";
+import Button from "../../components/Button";
 
 export default function ExpressYourIdeasSection() {
     const {
