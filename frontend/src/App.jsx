@@ -3,10 +3,12 @@ import Navbar from "./components/Navbar";
 import WhatIsGoingOnSection from "./components/WhatIsGoingOn";
 import WhatIsACMSIGCHISection from "./components/WhatIsACMSIGCHI";
 import ExpressYourIdeasSection from "./components/ExpressYourIdeas";
+import PageReveal from "./components/PageReveal";
 
 export default function App() {
     return (
         <>
+            <PageReveal />
             <Navbar />
             <main className="font-barlow pb-10">
                 <article className="w-full">

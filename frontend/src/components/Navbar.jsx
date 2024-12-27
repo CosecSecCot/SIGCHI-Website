@@ -1,4 +1,4 @@
-import gsap from 'gsap';
+import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 
@@ -25,22 +25,35 @@ const links = [
     },
 ];
 
+/**
+ * Navbar Component
+ *
+ * A responsive navigation bar. It includes a desktop menu and a mobile overlay
+ * menu with animated transitions using GSAP.
+ *
+ * @component
+ *
+ * @example
+ * <Navbar />
+ *
+ * @returns {JSX.Element} The Navbar component.
+ *
+ * @dependencies
+ * - `gsap`: For animations.
+ * - `@gsap/react`: React integration for GSAP.
+ */
 export default function Navbar() {
-    // const [menuOpen, setMenuOpen] = useState(false);
     const overlayRef = useRef();
 
-    const { contextSafe } = useGSAP({scope: overlayRef});
+    const { contextSafe } = useGSAP({ scope: overlayRef });
 
     const onMenuOpen = contextSafe(() => {
         const timeline = gsap.timeline();
-        timeline.to(
-            overlayRef.current,
-            {
-                y: "0%",
-                duration: 0.5,
-                ease: "power4.out"
-            }
-        );
+        timeline.to(overlayRef.current, {
+            y: "0%",
+            duration: 0.5,
+            ease: "power4.out",
+        });
 
         timeline.fromTo(
             ".navlink",
@@ -53,7 +66,7 @@ export default function Navbar() {
                 stagger: 0.1,
             },
             "-=0.5"
-        )
+        );
 
         timeline.fromTo(
             ".navlogo-large",
@@ -61,17 +74,14 @@ export default function Navbar() {
             { opacity: 1, scale: 1, duration: 0.5, ease: "power4" },
             "-=0.6"
         );
-    })
+    });
 
     const onMenuClose = contextSafe(() => {
-        gsap.to(
-            overlayRef.current,
-            {
-                y: "-100%",
-                ease: "power4.in",
-                duration: 0.4
-            }
-        );
+        gsap.to(overlayRef.current, {
+            y: "-100%",
+            ease: "power4.in",
+            duration: 0.4,
+        });
     });
 
     return (
@@ -115,10 +125,16 @@ export default function Navbar() {
                 </div>
                 <div className="flex flex-col items-center justify-around h-[70vh] gap-8">
                     <div className="flex flex-col items-center gap-[17px] text-[32px] text-white font-medium text-opacity-90">
-                        <a href="" className="navlink">HOME</a>
+                        <a href="" className="navlink">
+                            HOME
+                        </a>
                         {links.map((link, idx) => {
                             return (
-                                <a href={link.href} key={idx} className="navlink">
+                                <a
+                                    href={link.href}
+                                    key={idx}
+                                    className="navlink"
+                                >
                                     {link.title}
                                 </a>
                             );
@@ -129,7 +145,7 @@ export default function Navbar() {
                         alt="IIITD SIG CHI"
                         width={160}
                         height={164}
-                        className='navlogo-large'
+                        className="navlogo-large"
                     />
                 </div>
             </div>
