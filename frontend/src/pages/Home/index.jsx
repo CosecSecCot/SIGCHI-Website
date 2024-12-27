@@ -54,6 +54,56 @@ export default function HomePage() {
                 onComplete: () => setRevealAnimationComplete(true),
             });
         }
+
+        timeline.fromTo(
+            "nav",
+            {
+                y: -100,
+                opacity: 0,
+            },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 0.75,
+            },
+            "-=1.5"
+        );
+
+        timeline.fromTo(
+            ".main-content-container>div>*",
+            {
+                y: 50,
+                opacity: 0,
+                clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+            },
+            {
+                y: 0,
+                opacity: 1,
+                clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+                stagger: 0.15,
+            },
+            "-=2.25"
+        );
+
+        timeline.fromTo(
+            ".main-content-container>button",
+            { y: 20, opacity: 0 },
+            { y: 0, opacity: 1, duration: 1 },
+            "-=2.25"
+        );
+
+        timeline.fromTo(
+            ".bar-elements>div",
+            {
+                x: "100%",
+            },
+            {
+                x: 0,
+                duration: 1.5,
+                stagger: 0.1,
+            },
+            "-=2.25"
+        );
     });
 
     return (
@@ -62,7 +112,7 @@ export default function HomePage() {
             <Navbar />
             <main className="font-barlow pb-10">
                 <article className="w-full">
-                    <section className="flex flex-col gap-[20px] sm:gap-8 w-fit pl-[31px] pt-[8px] sm:pl-[81px] sm:pt-[67px]">
+                    <section className="main-content-container flex flex-col gap-[20px] sm:gap-8 w-fit pl-[31px] pt-[8px] sm:pl-[81px] sm:pt-[67px]">
                         <div className="flex flex-col gap-2">
                             <h1 className="flex flex-col text-[36px] leading-[43px] sm:text-[66px] sm:leading-[79px] w-[90%]">
                                 Redefining the Way
@@ -104,8 +154,34 @@ export default function HomePage() {
                             </svg>
                         </Button>
                     </section>
-                    <div className="absolute right-0 top-[179px] invisible min-[1220px]:visible">
-                        <img src="/element1.svg" alt="" />
+                    <div
+                        className="absolute right-0 top-[179px] invisible min-[1220px]:visible overflow-hidden"
+                        aria-hidden={true}
+                        role="presentation"
+                    >
+                        <div className="bar-elements flex flex-col gap-[13px]">
+                            <div className="flex justify-end">
+                                <div className="w-[673px] h-[101px] rounded-tl-[10px] rounded-bl-[10px] bg-persian-blue" />
+                            </div>
+                            <div className="flex justify-end">
+                                <div className="w-[386px] h-[101px] rounded-tl-[10px] rounded-bl-[10px] bg-persian-blue" />
+                            </div>
+                            <div className="flex justify-end">
+                                <div className="w-[581px] h-[101px] rounded-tl-[10px] rounded-bl-[10px] bg-persian-blue" />
+                            </div>
+                            <div className="flex justify-end">
+                                <div className="w-[816px] h-[101px] rounded-tl-[10px] rounded-bl-[10px] bg-persian-blue" />
+                            </div>
+                            <div className="flex justify-end gap-[33px] items-center">
+                                <blockquote className="font-extralight text-right italic text-[26px] leading-[31px]">
+                                    “Great design doesn’t just bridge humans and
+                                    technology—it creates <br /> experiences
+                                    that feel natural, intuitive, and human at
+                                    their core.”
+                                </blockquote>
+                                <div className="w-[453px] h-[101px] rounded-tl-[10px] rounded-bl-[10px] bg-persian-blue" />
+                            </div>
+                        </div>
                     </div>
                 </article>
                 <WhatIsGoingOnSection />
