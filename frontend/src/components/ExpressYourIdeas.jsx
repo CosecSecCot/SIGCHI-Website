@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import Button from "./Button";
 
 export default function ExpressYourIdeasSection() {
     const {
@@ -93,22 +94,30 @@ export default function ExpressYourIdeasSection() {
                         />
                     </div>
                     <div className="flex lg:justify-end">
-                        <button
-                            type="submit"
-                            disabled={isSubmitting}
-                            className="font-agdasima w-fit h-fit flex items-center gap-2 px-[17px] py-[9px] sm:px-[28px] sm:py-[14px] text-[18px] sm:text-[30px] bg-white border-[1px] sm:border-[2px] border-persian-blue text-persian-blue rounded-md disabled:opacity-30"
-                        >
-                            <div className="flex gap-2">
-                                <span>Submit</span>
-                                <img
-                                    src="/Arrow - Right.svg"
-                                    alt=""
-                                    width={30}
-                                    height={30}
-                                    className="w-[20px] sm:w-auto h-auto"
+                        <Button type="submit" disabled={isSubmitting}>
+                            <span className="relative">Submit</span>
+                            <svg
+                                width="34"
+                                height="34"
+                                viewBox="0 0 34 34"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="relative w-[1.25rem] sm:w-auto h-auto stroke-persian-blue sm:group-hover:stroke-white"
+                            >
+                                <path
+                                    d="M27.9792 16.6112H6.72925"
+                                    strokeWidth="2.125"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
                                 />
-                            </div>
-                        </button>
+                                <path
+                                    d="M19.4087 8.07682L27.9795 16.6108L19.4087 25.1462"
+                                    strokeWidth="2.125"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                            </svg>
+                        </Button>
                     </div>
                 </form>
             </section>

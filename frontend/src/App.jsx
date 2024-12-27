@@ -4,6 +4,7 @@ import WhatIsGoingOnSection from "./components/WhatIsGoingOn";
 import WhatIsACMSIGCHISection from "./components/WhatIsACMSIGCHI";
 import ExpressYourIdeasSection from "./components/ExpressYourIdeas";
 import PageReveal from "./components/PageReveal";
+import Button from "./components/Button";
 
 export default function App() {
     return (
@@ -29,14 +30,30 @@ export default function App() {
                                 can be seamless and meaningful.
                             </h2>
                         </div>
-                        <button className="font-agdasima w-fit h-fit flex items-center gap-2 px-[17px] py-[9px] sm:px-[28px] sm:py-[14px] text-[18px] sm:text-[30px] bg-white border-[1.5px] sm:border-[2px] border-persian-blue text-persian-blue rounded-md">
-                            <span>Learn More</span>
-                            <img
-                                src="/Arrow - Right.svg"
-                                alt=""
-                                className="w-[20px] sm:w-auto h-auto"
-                            />
-                        </button>
+                        <Button>
+                            <span className="relative">Learn More</span>
+                            <svg
+                                width="34"
+                                height="34"
+                                viewBox="0 0 34 34"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="relative w-[1.25rem] sm:w-auto h-auto stroke-persian-blue sm:group-hover:stroke-white"
+                            >
+                                <path
+                                    d="M27.9792 16.6112H6.72925"
+                                    strokeWidth="2.125"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                                <path
+                                    d="M19.4087 8.07682L27.9795 16.6108L19.4087 25.1462"
+                                    strokeWidth="2.125"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                            </svg>
+                        </Button>
                     </section>
                     <div className="absolute right-0 top-[179px] invisible min-[1220px]:visible">
                         <img src="/element1.svg" alt="" />
