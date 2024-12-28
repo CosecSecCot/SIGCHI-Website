@@ -44,7 +44,7 @@ export default function Button({
             disabled={disabled}
             className={`relative font-agdasima w-fit h-fit overflow-hidden flex items-center gap-2 px-[1rem] py-[0.5625rem] sm:px-[1.75rem]
                             sm:py-[0.875rem] text-[18px] sm:text-[30px] bg-white border sm:border-2 border-persian-blue text-persian-blue
-                            rounded-md ${disabled ? "" : "sm:hover:text-white sm:hover:scale-[1.05]"} transition-all duration-400 group disabled:opacity-30 disabled:cursor-not-allowed`}
+                            rounded-md ${disabled ? "" : "sm:hover:text-white"} transition-all duration-400 group disabled:opacity-30 disabled:cursor-not-allowed`}
         >
             <div
                 className={`absolute left-0 h-full w-0 ${disabled ? "" : "sm:group-hover:w-full"} bg-persian-blue transition-all duration-200`}

@@ -117,7 +117,7 @@ export default function Navbar() {
             </nav>
             <div
                 ref={overlayRef}
-                className="fixed z-50 top-0 left-0 w-full h-full bg-persian-blue translate-y-[-100%]"
+                className="fixed z-50 top-0 left-0 w-full h-full bg-persian-blue translate-y-[-100%] overflow-hidden"
             >
                 <div className="flex justify-end p-4">
                     <button className="" onClick={onMenuClose}>
