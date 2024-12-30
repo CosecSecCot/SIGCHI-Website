@@ -34,7 +34,7 @@ export default function WhatIsGoingOnSection() {
                 defaults: { ease: "power4.inOut" },
                 scrollTrigger: {
                     trigger: ".star-style-heading",
-                    start: "top center",
+                    start: "top 70%",
                 },
             });
 
@@ -136,7 +136,7 @@ function HighlightCard({
                     <div className="relative top-[7px] highlight-card-index font-agdasima text-persian-blue text-[19px] sm:text-[45px] leading-none">
                         {number}
                     </div>
-                    <div className="-space-y-2">
+                    <div className="sm:-space-y-2">
                         <h2 className="highlight-card-heading text-[20px] sm:text-[48px] leading-tight">
                             {title}
                         </h2>
