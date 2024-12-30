@@ -1,30 +1,8 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
-import { Link } from "react-router";
-
-const links = [
-    {
-        title: "ABOUT US",
-        href: "/about",
-    },
-    {
-        title: "MEMBERS",
-        href: "",
-    },
-    {
-        title: "EVENTS & WORKSHOPS",
-        href: "",
-    },
-    {
-        title: "RESOURCES",
-        href: "",
-    },
-    {
-        title: "CONTACT US",
-        href: "",
-    },
-];
+import { Link, NavLink } from "react-router";
+import { DropdownItem, DropdownMenu } from "./DropdownMenu";
 
 /**
  * Navbar Component
@@ -86,7 +64,7 @@ export default function Navbar() {
     });
 
     return (
-        <header className="w-full px-4 sm:px-9 py-8 font-barlow">
+        <header className="relative w-full px-4 sm:px-9 py-8 font-barlow z-40">
             <nav className="nav-shadow-small sm:nav-shadow px-4 sm:px-11 py-4 flex justify-between items-center bg-white shadow-[#0000001a] rounded-xl">
                 <Link to="/" className="flex items-center gap-2 flex-shrink-0">
                     <img
@@ -100,13 +78,38 @@ export default function Navbar() {
                     </span>
                 </Link>
                 <div className="lg:flex gap-11 text-2xl hidden">
-                    {links.map((link, idx) => {
-                        return (
-                            <Link to={link.href} key={idx}>
-                                {link.title}
-                            </Link>
-                        );
-                    })}
+                    <DropdownMenu title="ABOUT">
+                        <DropdownItem>
+                            <Link to="/aboutus">ABOUT US</Link>
+                        </DropdownItem>
+                        <DropdownItem>
+                            <Link to="/members">MEMBERS</Link>
+                        </DropdownItem>
+                    </DropdownMenu>
+                    <NavLink
+                        to="/events"
+                        className={(e) =>
+                            e.isActive ? "text-persian-blue" : ""
+                        }
+                    >
+                        EVENTS &amp; WORKSHOPS
+                    </NavLink>
+                    <NavLink
+                        to="/resources"
+                        className={(e) =>
+                            e.isActive ? "text-persian-blue" : ""
+                        }
+                    >
+                        RESOURCES
+                    </NavLink>
+                    <NavLink
+                        to="/contact"
+                        className={(e) =>
+                            e.isActive ? "text-persian-blue" : ""
+                        }
+                    >
+                        CONTACT US
+                    </NavLink>
                 </div>
                 <button
                     className="flex justify-end lg:hidden"
@@ -129,17 +132,21 @@ export default function Navbar() {
                         <Link to="/" className="navlink">
                             HOME
                         </Link>
-                        {links.map((link, idx) => {
-                            return (
-                                <Link
-                                    to={link.href}
-                                    key={idx}
-                                    className="navlink"
-                                >
-                                    {link.title}
-                                </Link>
-                            );
-                        })}
+                        <Link to="/" className="navlink">
+                            ABOUT US
+                        </Link>
+                        <Link to="/" className="navlink">
+                            MEMBERS
+                        </Link>
+                        <Link to="" className="navlink">
+                            EVENTS &amp; WORKSHOPS
+                        </Link>
+                        <Link to="" className="navlink">
+                            RESOURCES
+                        </Link>
+                        <Link to="" className="navlink">
+                            CONTACT US
+                        </Link>
                     </div>
                     <img
                         src="/logo2.svg"
