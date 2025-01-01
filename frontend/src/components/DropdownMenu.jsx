@@ -2,11 +2,24 @@ import gsap from "gsap";
 import { useRef, useState } from "react";
 import PropTypes from "prop-types";
 import { useGSAP } from "@gsap/react";
+import DownArrow from "./icons/DownArrow";
 
 /**
  * DropdownMenu component renders a dropdown with a title and customizable items.
  *
  * @component
+ *
+ * @example
+ *
+ * <DropdownMenu title="Click ME">
+ *     <DropdownItem>
+ *         <a href="#option1">Option 1</a>
+ *     </DropdownItem>
+ *     <DropdownItem>
+ *         <a href="#option2">Option 2</a>
+ *     </DropdownItem>
+ * </DropdownMenu>
+ *
  * @param {string} title - The title displayed for the dropdown button.
  * @param {React.ReactNode} children - The items to display in the dropdown.
  */
@@ -55,27 +68,14 @@ export function DropdownMenu({ title, children }) {
         <div className="relative inline-block">
             <button
                 onClick={toggleDropdown}
-                className="flex items-center gap-2"
+                className="flex items-center gap-1"
             >
                 {title}
-                <svg
-                    width="12"
-                    height="8"
-                    viewBox="0 0 12 8"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className={`transform transition-transform ${
+                <DownArrow
+                    className={`w-[1.2rem] h-auto transform transition-transform stroke-black ${
                         isOpen ? "rotate-180" : "rotate-0"
                     }`}
-                >
-                    <path
-                        d="M11.25 1.375L6 6.625L0.75 1.375"
-                        stroke="#1A090D"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    />
-                </svg>
+                />
             </button>
             {/* isOpen && (
                 <div
