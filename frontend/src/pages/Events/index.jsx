@@ -32,35 +32,37 @@ export default function EventsPage() {
                             Show Past Events
                         </button>
                     </div>
-                    <div className="mt-[80px] flex flex-wrap gap-[64px] justify-center">
-                        <EventCard
-                            style="lg"
-                            date={new Date("Feburary 07, 2024 16:00:00")}
-                            title="Explore the Future : Design and Computation"
-                            subtitle="We are a collective of diverse thinkers reimagining how human-technology interactions can be seamless and meaningful."
-                            img="/image1.jpeg"
-                        />
-                        <EventCard
-                            style="sm-circle"
-                            date={new Date("Feburary 07, 2024 16:00:00")}
-                            title="Explore the Future : Design and Computation"
-                            subtitle="We are a collective of diverse thinkers reimagining how human-technology interactions can be seamless and meaningful."
-                            img="/image4.jpeg"
-                        />
-                        <EventCard
-                            style="sm"
-                            date={new Date("Feburary 07, 2024 16:00:00")}
-                            title="Explore the Future : Design and Computation"
-                            subtitle="We are a collective of diverse thinkers reimagining how human-technology interactions can be seamless and meaningful."
-                            img="/image2.jpeg"
-                        />
-                        <EventCard
-                            style="sm"
-                            date={new Date("Feburary 07, 2024 16:00:00")}
-                            title="Explore the Future : Design and Computation"
-                            subtitle="We are a collective of diverse thinkers reimagining how human-technology interactions can be seamless and meaningful."
-                            img="/image3.jpeg"
-                        />
+                    <div className="flex justify-center">
+                        <div className="mt-[80px] flex flex-wrap gap-[64px] justify-center max-w-[1118px]">
+                            <EventCard
+                                style="lg"
+                                date={new Date("Feburary 07, 2024 16:00:00")}
+                                title="Explore the Future : Design and Computation"
+                                subtitle="We are a collective of diverse thinkers reimagining how human-technology interactions can be seamless and meaningful."
+                                img="/image1.jpeg"
+                            />
+                            <EventCard
+                                style="sm-circle"
+                                date={new Date("Feburary 07, 2024 16:00:00")}
+                                title="Explore the Future : Design and Computation"
+                                subtitle="We are a collective of diverse thinkers reimagining how human-technology interactions can be seamless and meaningful."
+                                img="/image4.jpeg"
+                            />
+                            <EventCard
+                                style="sm"
+                                date={new Date("Feburary 07, 2024 16:00:00")}
+                                title="Explore the Future : Design and Computation"
+                                subtitle="We are a collective of diverse thinkers reimagining how human-technology interactions can be seamless and meaningful."
+                                img="/image2.jpeg"
+                            />
+                            <EventCard
+                                style="sm"
+                                date={new Date("Feburary 07, 2024 16:00:00")}
+                                title="Explore the Future : Design and Computation"
+                                subtitle="We are a collective of diverse thinkers reimagining how human-technology interactions can be seamless and meaningful."
+                                img="/image3.jpeg"
+                            />
+                        </div>
                     </div>
                 </section>
             </main>
