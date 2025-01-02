@@ -132,19 +132,19 @@ export default function Navbar() {
                         <Link to="/" className="navlink">
                             HOME
                         </Link>
-                        <Link to="/" className="navlink">
+                        <Link to="/aboutus" className="navlink">
                             ABOUT US
                         </Link>
-                        <Link to="/" className="navlink">
+                        <Link to="/members" className="navlink">
                             MEMBERS
                         </Link>
-                        <Link to="" className="navlink">
+                        <Link to="/events" className="navlink">
                             EVENTS &amp; WORKSHOPS
                         </Link>
-                        <Link to="" className="navlink">
+                        <Link to="/resources" className="navlink">
                             RESOURCES
                         </Link>
-                        <Link to="" className="navlink">
+                        <Link to="/contact" className="navlink">
                             CONTACT US
                         </Link>
                     </div>
