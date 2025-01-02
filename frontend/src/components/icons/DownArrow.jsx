@@ -11,7 +11,7 @@ import PropTypes from "prop-types";
  *
  * @param {Object} props - Component props.
  * @param {string|undefined} props.className - className
- * @returns {JSX.Element} The button component.
+ * @returns {JSX.Element} The DownArrow Icon.
  *
  */
 export default function DownArrow({ className }) {
