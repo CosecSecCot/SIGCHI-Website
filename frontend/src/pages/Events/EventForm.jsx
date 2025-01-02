@@ -1,7 +1,16 @@
+import PropTypes from "prop-types";
 import { useForm } from "react-hook-form";
 import DownArrow from "../../components/icons/DownArrow";
 import Search from "../../components/icons/Search";
 
+/**
+ * EventForm.
+ * Form to filter or search for events.
+ *
+ * @param {Object} props - The component props.
+ * @param {Function} props.onSubmit - Function to run when form is submitted.
+ * @returns {JSX.Element} The Event Form.
+ */
 export default function EventForm({ onSubmit }) {
     const { register, handleSubmit } = useForm();
 
@@ -46,3 +55,7 @@ export default function EventForm({ onSubmit }) {
         </form>
     );
 }
+
+EventForm.propTypes = {
+    onSubmit: PropTypes.func.isRequired,
+};

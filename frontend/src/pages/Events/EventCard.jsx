@@ -7,7 +7,13 @@ import { Link } from "react-router";
  * @component
  *
  * @example
- * <Navbar />
+ * <EventCard
+ *     style="sm"
+ *     date={new Date("Feburary 07, 2024 16:00:00")}
+ *     title="This is the title"
+ *     subtitle="This is the description."
+ *     img="/image.jpeg"
+ * />
  *
  * @param {Object} props - The component props.
  * @param {"lg"|"sm"|"sm-circle"} props.style - Style of the components. (by default "lg")
