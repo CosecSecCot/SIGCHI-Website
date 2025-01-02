@@ -25,13 +25,13 @@ export default function Footer() {
                         <Link to="">Archives</Link>
                         <Link to="">Blogs</Link>
                     </div>
-                    <div className="flex items-center gap-[5px] lg:gap-[18px] flex-shrink-0">
+                    <div className="flex items-center gap-[5px] lg:gap-[18px] flex-shrink">
                         <img
                             src={logo2}
                             alt=""
-                            className="w-[35px] lg:w-[108px] h-auto"
+                            className="max-w-[35px] lg:max-w-[108px] h-auto"
                         />
-                        <span className="text-[25px] leading-[30px] lg:text-[79px] lg:leading-[95px]">
+                        <span className="text-[25px] leading-[30px] lg:text-[79px] lg:leading-[95px] flex-shrink-0">
                             IIITD SIG <span className="font-bold">CHI.</span>
                         </span>
                     </div>

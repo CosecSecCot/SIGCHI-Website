@@ -122,12 +122,12 @@ export default function Navbar() {
                 ref={overlayRef}
                 className="fixed z-50 top-0 left-0 w-full h-full bg-persian-blue translate-y-[-100%] overflow-hidden"
             >
-                <div className="flex justify-end p-4">
+                <div className="absolute top-0 right-0 p-4">
                     <button className="" onClick={onMenuClose}>
                         <img src="/Cross.svg" alt="exit" />
                     </button>
                 </div>
-                <div className="flex flex-col items-center justify-around h-[70vh] gap-8">
+                <div className="h-full flex flex-col items-center justify-center gap-[100px]">
                     <div className="flex flex-col items-center gap-[17px] text-[32px] text-white font-medium text-opacity-90">
                         <Link to="/" className="navlink">
                             HOME
@@ -153,7 +153,7 @@ export default function Navbar() {
                         alt="IIITD SIG CHI"
                         width={160}
                         height={164}
-                        className="navlogo-large"
+                        className="navlogo-large hidden [@media(min-height:800px)]:block"
                     />
                 </div>
             </div>

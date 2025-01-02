@@ -12,8 +12,8 @@ export default function MembersPage() {
                     <section className="mt-[102px]">
                         <SectionHeading>Our Officers</SectionHeading>
                         <div className="w-full flex justify-center">
-                            <div className="mt-[64px] flex flex-wrap gap-[60px] max-w-[1120px]">
-                                {new Array(4).fill(0).map((_, idx) => (
+                            <div className="mt-[64px] flex flex-wrap gap-[60px] max-w-[1120px] justify-center">
+                                {new Array(6).fill(0).map((_, idx) => (
                                     <MemberCard
                                         key={idx}
                                         name="Sagar Gupta"
@@ -31,8 +31,8 @@ export default function MembersPage() {
                     <section className="mt-[72px] mb-[225px]">
                         <SectionHeading>Our Members</SectionHeading>
                         <div className="w-full flex justify-center">
-                            <div className="mt-[64px] flex flex-wrap gap-[60px] max-w-[1120px]">
-                                {new Array(8).fill(0).map((_, idx) => (
+                            <div className="mt-[64px] flex flex-wrap gap-[60px] max-w-[1120px] justify-center">
+                                {new Array(9).fill(0).map((_, idx) => (
                                     <MemberCard
                                         key={idx}
                                         name="Sagar Gupta"

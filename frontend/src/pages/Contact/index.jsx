@@ -25,7 +25,7 @@ export default function ContactPage() {
                         </h2>
                     </section>
                 </article>
-                <article className="mt-[30px] mb-[86px] sm:mt-[60px] mx-[31px] sm:mx-[80px] flex justify-center">
+                <article className="min-h-[50vh] items-start mt-[30px] mb-[86px] sm:mt-[60px] mx-[31px] sm:mx-[80px] flex justify-center">
                     <section className="flex gap-[24px] items-center max-w-[1120px] flex-wrap lg:flex-nowrap justify-center">
                         {new Array(3).fill(0).map((_, idx) => (
                             <ContactCard
