@@ -46,7 +46,7 @@ export default function ExpressYourIdeasSection() {
                             Email ID
                         </label>
                         {errors.email && (
-                            <span className="text-[24px] font-extralight italic text-gray-600">
+                            <span className="text-[24px] font-extralight italic text-zinc-600">
                                 {errors.email.message}
                             </span>
                         )}
@@ -76,7 +76,7 @@ export default function ExpressYourIdeasSection() {
                             Description
                         </label>
                         {errors.description && (
-                            <span className="text-[24px] font-extralight italic text-gray-600">
+                            <span className="text-[24px] font-extralight italic text-zinc-600">
                                 {errors.description.message}
                             </span>
                         )}
