@@ -38,7 +38,7 @@ export default function ActivityCard({
                         ) : (
                             ""
                         )}
-                        <Activity className="w-[34px] h-auto aspect-square" />
+                        <Activity className="w-[34px] h-auto aspect-square fill-persian-blue" />
                     </div>
                     <h3 className="font-normal text-[32px] leading-[38px]">
                         {title}
@@ -69,7 +69,7 @@ export default function ActivityCard({
                         ) : (
                             ""
                         )}
-                        <Activity className="w-[34px] h-auto aspect-square" />
+                        <Activity className="w-[34px] h-auto aspect-square fill-persian-blue" />
                     </div>
                     <h3 className="font-normal text-[34px] leading-[40px]">
                         {title}
