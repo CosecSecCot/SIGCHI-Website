@@ -19,14 +19,14 @@ export default function ResourcesForm({ onSubmit }) {
     return (
         <form
             onSubmit={handleSubmit(onSubmit)}
-            className="font-agdasima h-fit flex items-center border-2 border-persian-blue rounded-full overflow-hidden flex-shrink-0"
+            className="scale-125 sm:scale-1 font-agdasima h-fit flex items-center border-2 border-persian-blue rounded-full overflow-hidden flex-shrink-0"
         >
             <input
                 id="email"
                 name="email"
                 autoComplete="email"
                 placeholder="ENTER YOUR EMAIL"
-                className="text-[26px] leading-[33px] outline-none px-[40px] py-[35px]"
+                className="flex-shrink text-[13px] sm:text-[26px] leading-[17px] sm:leading-[33px] outline-none px-[20px] sm:px-[40px] py-[17px] sm:py-[35px]"
                 {...register("email", {
                     required: {
                         value: true,
@@ -41,7 +41,7 @@ export default function ResourcesForm({ onSubmit }) {
             <button
                 type="submit"
                 disabled={isSubmitting}
-                className="font-bold text-[32px] leading-[40px] px-[40px] py-[20px] mr-[16px] bg-persian-blue text-white rounded-full hover:scale-[1.02] transition-transform duration-100 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="font-bold flex-shrink-0 text-[16px] sm:text-[32px] leading-[20px] sm:leading-[40px] px-[20px] sm:px-[40px] py-[10px] sm:py-[20px] mr-[8px] sm:mr-[16px] bg-persian-blue text-white rounded-full hover:scale-[1.02] transition-transform duration-100 disabled:opacity-50 disabled:cursor-not-allowed"
             >
                 LETS GO
             </button>

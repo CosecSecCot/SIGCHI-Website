@@ -50,9 +50,9 @@ export default function ResourcesPage() {
                     </section>
                 </article>
 
-                <article className="my-[92px] flex justify-center">
-                    <section className="flex max-w-[1120px] gap-[48px] items-center">
-                        <h1 className="w-[60%] text-[48px] leading-[58px]">
+                <article className="mx-[80px] my-[92px] flex justify-center">
+                    <section className="flex flex-col lg:flex-row gap-[48px] items-center justify-evenly">
+                        <h1 className="sm:w-[50%] text-[36px] sm:text-[48px] leading-[44px] sm:leading-[58px]">
                             Join our resources of SIGCHI and get the latest
                             acitvity update into your inbox monthly.
                         </h1>
