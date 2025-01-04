@@ -3,6 +3,7 @@ import ContactPage from "./Contact";
 import EventsPage from "./Events";
 import HomePage from "./Home";
 import MembersPage from "./Members";
+import NotFound from "./NotFound";
 import ResourcesPage from "./Resources";
 
 /**
@@ -43,6 +44,11 @@ const pagesData = [
         path: "/contact",
         element: <ContactPage />,
         title: "Contact Us - IIITD SIGCHI",
+    },
+    {
+        path: "*",
+        element: <NotFound />,
+        title: "Page Not Found - IIITD SIGCHI",
     },
 ];
 
