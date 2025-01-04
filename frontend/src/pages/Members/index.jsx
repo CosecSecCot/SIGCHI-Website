@@ -9,7 +9,7 @@ export default function MembersPage() {
             <Navbar />
             <main>
                 <article className="mx-[31px] sm:mx-[81px]">
-                    <section className="mt-[102px]">
+                    <section className="mt-[48px] sm:mt-[102px]">
                         <SectionHeading>Our Officers</SectionHeading>
                         <div className="w-full flex justify-center">
                             <div className="mt-[64px] flex flex-wrap gap-[60px] max-w-[1120px] justify-center">
@@ -28,7 +28,7 @@ export default function MembersPage() {
                             </div>
                         </div>
                     </section>
-                    <section className="mt-[72px] mb-[225px]">
+                    <section className="mt-[72px] mb-[113px] sm:mb-[225px]">
                         <SectionHeading>Our Members</SectionHeading>
                         <div className="w-full flex justify-center">
                             <div className="mt-[64px] flex flex-wrap gap-[60px] max-w-[1120px] justify-center">
