@@ -16,7 +16,7 @@ import PropTypes from "prop-types";
  */
 export default function SectionHeading({ children }) {
     return (
-        <h1 className="font-agdasima text-[64px] leading-[66px] text-persian-blue">
+        <h1 className="font-agdasima text-[48px] leading-[58px] sm:text-[64px] sm:leading-[66px] text-persian-blue">
             {children}
             <div className="h-[2px] bg-gradient-to-r from-persian-blue to-transparent opacity-30" />
         </h1>

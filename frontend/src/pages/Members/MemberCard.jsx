@@ -6,13 +6,13 @@ import Message from "../../components/icons/Message";
 
 const iconMap = {
     email: (
-        <Message className="relative w-[20px] h-auto aspect-square fill-persian-blue sm:group-hover:fill-white" />
+        <Message className="relative w-[16px] sm:w-[20px] h-auto aspect-square fill-persian-blue sm:group-hover:fill-white" />
     ),
     instagram: (
-        <Instagram className="relative w-[20px] h-auto aspect-square fill-persian-blue sm:group-hover:fill-white" />
+        <Instagram className="relative w-[16px] sm:w-[20px] h-auto aspect-square fill-persian-blue sm:group-hover:fill-white" />
     ),
     linkedin: (
-        <Linkedin className="relative w-[20px] h-auto aspect-square fill-persian-blue sm:group-hover:fill-white" />
+        <Linkedin className="relative w-[16px] sm:w-[20px] h-auto aspect-square fill-persian-blue sm:group-hover:fill-white" />
     ),
 };
 
@@ -35,15 +35,17 @@ export default function MemberCard({ name, position, socials }) {
                         Object.keys(socials).map((social, idx) => {
                             return (
                                 <Button key={idx}>
-                                    <div className="p-[10px]">
+                                    <div className="p-[8px] sm:p-[10px]">
                                         {iconMap[social]}
                                     </div>
                                 </Button>
                             );
                         })}
                 </div>
-                <h2 className="text-[36px] leading-[43px]">{name}</h2>
-                <h3 className="text-[28px] leading-[34px] opacity-60">
+                <h2 className="text-[27px] leading-[32px] sm:text-[36px] sm:leading-[43px]">
+                    {name}
+                </h2>
+                <h3 className="text-[21px] leading-[25px] sm:text-[28px] sm:leading-[34px] opacity-60">
                     {position}
                 </h3>
             </div>

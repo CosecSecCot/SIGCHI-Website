@@ -19,13 +19,13 @@ export default function ActivityCard({
     switch (size) {
         case "sm":
             return (
-                <div className={`max-w-[275px]`}>
+                <div className="max-w-[275px]">
                     <div className="flex items-center gap-2">
                         {iconWithBar ? (
                             <svg
                                 width="4"
-                                height="32"
-                                viewBox="0 0 4 32"
+                                height="30"
+                                viewBox="0 0 4 30"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                             >
@@ -38,25 +38,25 @@ export default function ActivityCard({
                         ) : (
                             ""
                         )}
-                        <Activity className="w-[34px] h-auto aspect-square fill-persian-blue" />
+                        <Activity className="w-[32px] sm:w-[34px] h-auto aspect-square fill-persian-blue" />
                     </div>
-                    <h3 className="font-normal text-[32px] leading-[38px]">
+                    <h3 className="font-normal text-[24px] leading-[28px] sm:text-[32px] sm:leading-[38px]">
                         {title}
                     </h3>
-                    <p className="font-extralight text-[22px] leading-[26px]">
+                    <p className="font-extralight text-[17px] leading-[20px] sm:text-[22px] sm:leading-[26px]">
                         {description}
                     </p>
                 </div>
             );
         case "lg":
             return (
-                <div className={`max-w-[325px]`}>
+                <div className="max-w-[275px] sm:max-w-[325px]">
                     <div className="flex items-center gap-2">
                         {iconWithBar ? (
                             <svg
                                 width="4"
-                                height="32"
-                                viewBox="0 0 4 32"
+                                height="30"
+                                viewBox="0 0 4 30"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                             >
@@ -69,12 +69,12 @@ export default function ActivityCard({
                         ) : (
                             ""
                         )}
-                        <Activity className="w-[34px] h-auto aspect-square fill-persian-blue" />
+                        <Activity className="w-[32px] sm:w-[34px] h-auto aspect-square fill-persian-blue" />
                     </div>
-                    <h3 className="font-normal text-[34px] leading-[40px]">
+                    <h3 className="font-normal text-[26px] leading-[30px] sm:text-[34px] sm:leading-[40px]">
                         {title}
                     </h3>
-                    <p className="font-extralight text-[23px] leading-[28px]">
+                    <p className="font-extralight text-[17px] leading-[20px] sm:text-[23px] sm:leading-[28px]">
                         {description}
                     </p>
                 </div>
