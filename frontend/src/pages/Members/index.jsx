@@ -11,8 +11,8 @@ export default function MembersPage() {
                 <article className="mx-[31px] sm:mx-[81px]">
                     <section className="mt-[48px] sm:mt-[102px]">
                         <SectionHeading>Our Officers</SectionHeading>
-                        <div className="w-full flex justify-center">
-                            <div className="mt-[64px] flex flex-wrap gap-[60px] max-w-[1120px] justify-center">
+                        <div className="w-full flex justify-start">
+                            <div className="mt-[64px] flex flex-wrap gap-[60px] justify-center lg:justify-start">
                                 {new Array(6).fill(0).map((_, idx) => (
                                     <MemberCard
                                         key={idx}
@@ -30,8 +30,8 @@ export default function MembersPage() {
                     </section>
                     <section className="mt-[72px] mb-[113px] sm:mb-[225px]">
                         <SectionHeading>Our Members</SectionHeading>
-                        <div className="w-full flex justify-center">
-                            <div className="mt-[64px] flex flex-wrap gap-[60px] max-w-[1120px] justify-center">
+                        <div className="w-full flex justify-start">
+                            <div className="mt-[64px] flex flex-wrap gap-[60px] justify-center lg:justify-start">
                                 {new Array(9).fill(0).map((_, idx) => (
                                     <MemberCard
                                         key={idx}
