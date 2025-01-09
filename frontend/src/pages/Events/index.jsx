@@ -42,21 +42,18 @@ export default function EventsPage() {
                                 img="/image1.jpeg"
                             />
                             <EventCard
-                                style="sm"
                                 date={new Date("Feburary 07, 2024 16:00:00")}
                                 title="Explore the Future : Design and Computation"
                                 subtitle="We are a collective of diverse thinkers reimagining how human-technology interactions can be seamless and meaningful."
                                 img="/image4.jpeg"
                             />
                             <EventCard
-                                style="sm"
                                 date={new Date("Feburary 07, 2024 16:00:00")}
                                 title="Explore the Future : Design and Computation"
                                 subtitle="We are a collective of diverse thinkers reimagining how human-technology interactions can be seamless and meaningful."
                                 img="/image2.jpeg"
                             />
                             <EventCard
-                                style="sm"
                                 date={new Date("Feburary 07, 2024 16:00:00")}
                                 title="Explore the Future : Design and Computation"
                                 subtitle="We are a collective of diverse thinkers reimagining how human-technology interactions can be seamless and meaningful."
