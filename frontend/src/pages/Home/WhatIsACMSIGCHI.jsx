@@ -1,4 +1,5 @@
 import Button from "../../components/Button";
+import RightArrow from "../../components/icons/RightArrow";
 
 export default function WhatIsACMSIGCHISection() {
     return (
@@ -27,27 +28,7 @@ export default function WhatIsACMSIGCHISection() {
                             sm:py-[14px]"
                         >
                             <span className="relative">Learn More</span>
-                            <svg
-                                width="34"
-                                height="34"
-                                viewBox="0 0 34 34"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="relative w-[1.25rem] sm:w-auto h-auto stroke-persian-blue sm:group-hover:stroke-white"
-                            >
-                                <path
-                                    d="M27.9792 16.6112H6.72925"
-                                    strokeWidth="2.125"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                />
-                                <path
-                                    d="M19.4087 8.07682L27.9795 16.6108L19.4087 25.1462"
-                                    strokeWidth="2.125"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                />
-                            </svg>
+                            <RightArrow className="relative w-[1.25rem] sm:w-auto h-auto stroke-persian-blue sm:group-hover:stroke-white" />
                         </div>
                     </Button>
                 </div>
