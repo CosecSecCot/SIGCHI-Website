@@ -1,6 +1,7 @@
 import PropType from "prop-types";
 import { Link } from "react-router";
 import { formatDate } from "../../utils/formatting";
+import RightArrow from "../../components/icons/RightArrow";
 
 /**
  * Event Card
@@ -59,9 +60,10 @@ export default function EventCard({
                         <div>
                             <Link
                                 to=""
-                                className="font-agdasima text-persian-blue text-[24px] leading-[28px]"
+                                className="w-fit font-agdasima text-persian-blue text-[24px] leading-[28px] flex gap-[12px] hover:gap-[14px] border-b sm:border-b-2 border-b-persian-blue border-opacity-0 hover:border-opacity-100 items-center transition-all"
                             >
                                 VIEW EVENT DETAILS
+                                <RightArrow className="w-[24px] h-auto stroke-persian-blue" />
                             </Link>
                         </div>
                     </div>
@@ -70,11 +72,22 @@ export default function EventCard({
         case "sm":
             return (
                 <div className="font-barlow max-w-[330px] flex flex-col gap-[30px] items-center">
-                    <img
-                        src={img}
-                        alt={title}
-                        className="aspect-square rounded-[20px] object-cover"
-                    />
+                    <div className="relative group">
+                        <img
+                            src={img}
+                            alt={title}
+                            className="aspect-square rounded-[20px] group-hover:rounded-full object-cover brightness-100 group-hover:brightness-50 transition-all"
+                        />
+                        <div className="hidden group-hover:flex justify-center items-center absolute top-0 left-0 w-full h-full">
+                            <Link
+                                to=""
+                                className="w-fit font-agdasima text-white text-[23px] leading-[28px] flex gap-[12px] hover:gap-[14px] border-b border-b-white"
+                            >
+                                VIEW EVENT DETAILS
+                                <RightArrow className="w-[24px] h-auto stroke-white" />
+                            </Link>
+                        </div>
+                    </div>
                     <div className="space-y-[50px]">
                         <div className="space-y-2">
                             <h3 className="font-agdasima text-persian-blue text-[17px] leading-[21px]">
@@ -90,9 +103,10 @@ export default function EventCard({
                         <div>
                             <Link
                                 to=""
-                                className="font-agdasima text-persian-blue text-[18px] leading-[21px]"
+                                className="w-fit font-agdasima text-persian-blue text-[18px] leading-[21px] flex gap-[8px] hover:gap-[10px] border-b border-b-persian-blue border-opacity-0 hover:border-opacity-100 items-center transition-all"
                             >
                                 VIEW EVENT DETAILS
+                                <RightArrow className="w-[18px] h-auto stroke-persian-blue" />
                             </Link>
                         </div>
                     </div>

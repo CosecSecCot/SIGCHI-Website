@@ -12,3 +12,8 @@
 .nav-shadow-small {
     filter: drop-shadow(#0000001a 0px 0px 23px)
 }
+
+* {
+    scrollbar-color: #1a36c0 #fff;
+    scrollbar-width: auto;
+}
