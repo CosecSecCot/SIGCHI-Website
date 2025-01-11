@@ -76,9 +76,9 @@ export default function EventCard({
                         <img
                             src={img}
                             alt={title}
-                            className="aspect-square rounded-[20px] group-hover:rounded-full object-cover brightness-100 group-hover:brightness-50 transition-all"
+                            className="aspect-square rounded-[20px] group-hover:rounded-full object-cover brightness-100 group-hover:brightness-50 transition-all delay-200"
                         />
-                        <div className="hidden group-hover:flex justify-center items-center absolute top-0 left-0 w-full h-full">
+                        <div className="invisible group-hover:visible flex justify-center items-center absolute top-0 left-0 w-full h-full delay-200">
                             <Link
                                 to=""
                                 className="w-fit font-agdasima text-white text-[23px] leading-[28px] flex gap-[12px] hover:gap-[14px] border-b border-b-white"
