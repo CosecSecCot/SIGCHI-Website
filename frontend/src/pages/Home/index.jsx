@@ -147,16 +147,16 @@ export default function HomePage() {
                     >
                         <div className="bar-elements flex flex-col gap-[13px]">
                             <div className="flex justify-end">
-                                <div className="w-[673px] h-[101px] rounded-tl-[10px] rounded-bl-[10px] bg-persian-blue" />
+                                <div className="min-w-[673px] w-[42vw] h-[101px] rounded-tl-[10px] rounded-bl-[10px] bg-persian-blue" />
                             </div>
                             <div className="flex justify-end">
-                                <div className="w-[386px] h-[101px] rounded-tl-[10px] rounded-bl-[10px] bg-persian-blue" />
+                                <div className="min-w-[386px] w-[25vw] h-[101px] rounded-tl-[10px] rounded-bl-[10px] bg-persian-blue" />
                             </div>
                             <div className="flex justify-end">
-                                <div className="w-[581px] h-[101px] rounded-tl-[10px] rounded-bl-[10px] bg-persian-blue" />
+                                <div className="min-w-[581px] w-[40vw] h-[101px] rounded-tl-[10px] rounded-bl-[10px] bg-persian-blue" />
                             </div>
                             <div className="flex justify-end">
-                                <div className="w-[816px] h-[101px] rounded-tl-[10px] rounded-bl-[10px] bg-persian-blue" />
+                                <div className="min-w-[816px] w-[54vw] h-[101px] rounded-tl-[10px] rounded-bl-[10px] bg-persian-blue" />
                             </div>
                             <div className="flex justify-end gap-[33px] items-center">
                                 <blockquote className="font-extralight text-right italic text-[26px] leading-[31px]">
@@ -165,7 +165,7 @@ export default function HomePage() {
                                     that feel natural, intuitive, and human at
                                     their core.”
                                 </blockquote>
-                                <div className="w-[453px] h-[101px] rounded-tl-[10px] rounded-bl-[10px] bg-persian-blue" />
+                                <div className="min-w-[453px] w-[30vw] h-[101px] rounded-tl-[10px] rounded-bl-[10px] bg-persian-blue" />
                             </div>
                         </div>
                     </div>

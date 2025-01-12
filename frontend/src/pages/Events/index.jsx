@@ -1,3 +1,6 @@
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import EventForm from "./EventForm";
@@ -8,11 +11,30 @@ export default function EventsPage() {
         console.log(data);
     };
 
+    useGSAP(() => {
+        gsap.fromTo(
+            ".page-heading>*",
+            {
+                y: "20%",
+                opacity: 0,
+                clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+            },
+            {
+                y: 0,
+                opacity: 1,
+                clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+                ease: "power4.inOut",
+                stagger: 0.15,
+                duration: 0.5,
+            }
+        );
+    });
+
     return (
         <>
             <Navbar />
             <main className="font-barlow min-h-[70vh] pb-10">
-                <section className="space-y-4 mx-[31px] sm:mx-[80px] mt-[8px] sm:mt-[79px]">
+                <section className="page-heading space-y-4 mx-[31px] sm:mx-[80px] mt-[8px] sm:mt-[79px]">
                     <h1 className="text-[51px] leading-[53px] sm:text-[96px] sm:leading-[100px] lg:w-[80%] xl:w-[50%]">
                         Explore upcoming events and workshops.
                     </h1>
