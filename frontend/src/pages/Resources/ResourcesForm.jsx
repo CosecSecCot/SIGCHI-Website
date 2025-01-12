@@ -19,14 +19,14 @@ export default function ResourcesForm({ onSubmit }) {
     return (
         <form
             onSubmit={handleSubmit(onSubmit)}
-            className="scale-125 sm:scale-1 font-agdasima h-fit flex items-center border-2 border-persian-blue rounded-full overflow-hidden flex-shrink-0"
+            className="relative scale-125 sm:scale-1 font-agdasima h-fit flex items-center border-2 border-persian-blue rounded-full overflow-hidden"
         >
             <input
                 id="email"
                 name="email"
                 autoComplete="email"
                 placeholder="ENTER YOUR EMAIL"
-                className="flex-shrink text-[13px] sm:text-[26px] leading-[17px] sm:leading-[33px] outline-none px-[20px] sm:px-[40px] py-[17px] sm:py-[35px]"
+                className="text-[13px] md:text-[26px] leading-[17px] md:leading-[33px] outline-none pl-[20px] md:pl-[40px] pr-[100px] md:pr-[250px] py-[17px] md:py-[35px]"
                 {...register("email", {
                     required: {
                         value: true,
@@ -41,7 +41,12 @@ export default function ResourcesForm({ onSubmit }) {
             <button
                 type="submit"
                 disabled={isSubmitting}
-                className="font-bold flex-shrink-0 text-[16px] sm:text-[32px] leading-[20px] sm:leading-[40px] px-[20px] sm:px-[40px] py-[10px] sm:py-[20px] mr-[8px] sm:mr-[16px] bg-persian-blue text-white rounded-full hover:scale-[1.02] transition-transform duration-100 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="absolute top-1/2 -translate-y-1/2 right-0 font-bold
+                text-[16px] md:text-[32px] leading-[20px] md:leading-[40px]
+                px-[20px] md:px-[40px] py-[10px] md:py-[20px] mr-[8px] md:mr-[16px]
+                bg-persian-blue text-white rounded-full
+                hover:scale-[1.02] transition-transform duration-100
+                disabled:contrast-50 disabled:cursor-not-allowed"
             >
                 LETS GO
             </button>
