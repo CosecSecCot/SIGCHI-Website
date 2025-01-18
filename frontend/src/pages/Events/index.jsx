@@ -58,28 +58,10 @@ export default function EventsPage() {
                         <div className="mt-[80px] flex flex-wrap gap-[64px] justify-center max-w-[1118px]">
                             <EventCard
                                 style="lg"
-                                date={new Date("Feburary 07, 2024 16:00:00")}
-                                title="Explore the Future : Design and Computation"
-                                subtitle="We are a collective of diverse thinkers reimagining how human-technology interactions can be seamless and meaningful."
-                                img="/image1.jpeg"
-                            />
-                            <EventCard
-                                date={new Date("Feburary 07, 2024 16:00:00")}
-                                title="Explore the Future : Design and Computation"
-                                subtitle="We are a collective of diverse thinkers reimagining how human-technology interactions can be seamless and meaningful."
-                                img="/image4.jpeg"
-                            />
-                            <EventCard
-                                date={new Date("Feburary 07, 2024 16:00:00")}
-                                title="Explore the Future : Design and Computation"
-                                subtitle="We are a collective of diverse thinkers reimagining how human-technology interactions can be seamless and meaningful."
-                                img="/image2.jpeg"
-                            />
-                            <EventCard
-                                date={new Date("Feburary 07, 2024 16:00:00")}
-                                title="Explore the Future : Design and Computation"
-                                subtitle="We are a collective of diverse thinkers reimagining how human-technology interactions can be seamless and meaningful."
-                                img="/image3.jpeg"
+                                date={new Date("Feburary 07, 2024 12:30:00")}
+                                title="IIIT Delhi SIGCHI Chapter Inauguration Event"
+                                subtitle="The SIGCHI inauguration event kicks off a journey of innovation and collaboration in human-computer interaction, bringing together experts and enthusiasts to inspire new ideas and advancements in user experience design."
+                                img="/images/events/image1.svg"
                             />
                         </div>
                     </div>

@@ -9,19 +9,12 @@ import { useRef } from "react";
 const events = [
     {
         number: "01",
+        date: "Friday, 7th Feburary 2025",
         title: "Science Design Cafe",
         subtitle: "at IIIT Delhi",
         description:
             "We are a collective of diverse thinkers reimagining how human.",
-        image: "/design-workshops.svg",
-    },
-    {
-        number: "02",
-        title: "Design Workshops",
-        subtitle: "at IIIT Delhi",
-        description:
-            "We are a collective of diverse thinkers reimagining how human.",
-        image: "/science-design-cafe.svg",
+        image: "/images/home/image1.svg",
     },
 ];
 
@@ -48,7 +41,7 @@ export default function WhatIsGoingOnSection() {
             );
 
             timeline.fromTo(
-                ".highlight-card-index, .highlight-card-heading, .highlight-card-subheading, .highlight-card-text",
+                ".highlight-card-index, .highlight-card-date, .highlight-card-heading, .highlight-card-subheading, .highlight-card-text",
                 {
                     opacity: 0,
                     clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
@@ -95,6 +88,7 @@ export default function WhatIsGoingOnSection() {
                         <HighlightCard
                             key={idx}
                             number={event.number}
+                            date={event.date}
                             title={event.title}
                             subtitle={event.subtitle}
                             description={event.description}
@@ -112,6 +106,7 @@ export default function WhatIsGoingOnSection() {
  *
  * @param {Object} props - The component props.
  * @param {string} props.number - The number or order of the activity (e.g., "01").
+ * @param {string?} props.date - The date of the event as a string.
  * @param {string} props.title - The title of the activity or event.
  * @param {string} props.subtitle - A subtitle or location of the activity (e.g., "at IIIT Delhi").
  * @param {string} props.description - A brief description of the activity.
@@ -121,6 +116,7 @@ export default function WhatIsGoingOnSection() {
  */
 function HighlightCard({
     number,
+    date,
     title,
     subtitle,
     description,
@@ -136,10 +132,15 @@ function HighlightCard({
                     <div className="relative top-[7px] highlight-card-index font-agdasima text-persian-blue text-[19px] sm:text-[45px] leading-none">
                         {number}
                     </div>
-                    <div className="sm:-space-y-2">
-                        <h2 className="highlight-card-heading text-[20px] sm:text-[48px] leading-tight">
-                            {title}
-                        </h2>
+                    <div>
+                        <div className="-space-y-1">
+                            <span className="highlight-card-date font-light text-[10px] sm:text-[20px] leading-tight italic">
+                                {date}
+                            </span>
+                            <h2 className="highlight-card-heading text-[20px] sm:text-[48px] leading-tight">
+                                {title}
+                            </h2>
+                        </div>
                         <h3 className="highlight-card-subheading text-persian-blue text-[13px] sm:text-[30px]">
                             {subtitle}
                         </h3>
@@ -149,7 +150,7 @@ function HighlightCard({
                     {description}
                 </p>
             </div>
-            <div className="highlight-card-image w-[35%] sm:w-auto">
+            <div className="highlight-card-image w-[35%] sm:w-auto lg:flex-shrink-0">
                 <img src={image} alt={title} className="" />
             </div>
         </div>
@@ -158,6 +159,7 @@ function HighlightCard({
 
 HighlightCard.propTypes = {
     number: PropTypes.string.isRequired,
+    date: PropTypes.string,
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,

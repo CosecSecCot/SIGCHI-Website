@@ -20,15 +20,24 @@ const iconMap = {
  * MemberCard.
  *
  * @param {Object} props - The component props.
+ * @param {string} props.image
  * @param {string} props.name
  * @param {string} props.position
  * @param {Object<string, string>|undefined} props.socials
  * @returns {JSX.Element} - The MemberCard component.
  */
-export default function MemberCard({ name, position, socials }) {
+export default function MemberCard({ image, name, position, socials }) {
     return (
         <div className="font-barlow min-w-[235px] flex flex-col gap-3">
-            <div className="w-full aspect-square rounded-[10px] bg-persian-blue" />
+            {image ? (
+                <img
+                    src={image}
+                    alt={name}
+                    className="w-[235px] object-cover aspect-square rounded-[10px] bg-persian-blue"
+                />
+            ) : (
+                <div className="w-full aspect-square rounded-[10px] bg-persian-blue" />
+            )}
             <div>
                 <div className="flex gap-2">
                     {socials &&
@@ -54,6 +63,7 @@ export default function MemberCard({ name, position, socials }) {
 }
 
 MemberCard.propTypes = {
+    image: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     position: PropTypes.string.isRequired,
     socials: PropTypes.objectOf(PropTypes.string),
