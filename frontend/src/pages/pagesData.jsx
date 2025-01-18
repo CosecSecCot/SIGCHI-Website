@@ -35,11 +35,11 @@ const pagesData = [
         element: <EventsPage />,
         title: "Events & Workshops - IIITD SIGCHI",
     },
-    {
-        path: "/resources",
-        element: <ResourcesPage />,
-        title: "Resources - IIITD SIGCHI",
-    },
+    // {
+    //     path: "/resources",
+    //     element: <ResourcesPage />,
+    //     title: "Resources - IIITD SIGCHI",
+    // },
     {
         path: "/contact",
         element: <ContactPage />,

@@ -19,7 +19,7 @@ export default function Footer() {
                         </Link>
                         <Link to="/events">Events</Link>
                         <Link to="/aboutus">About Us</Link>
-                        <Link to="/resources">Resources</Link>
+                        <Link to="">Resources</Link>
                         <Link to="/events">Workshops</Link>
                         <Link to="/members">Members</Link>
                         <Link to="">Archives</Link>
@@ -33,8 +33,8 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="flex justify-between items-center text-[14px] leading-tight md:text-[28px] md:leading-[33px]">
-                    <div>IIIT Delhi’s ACM SIGCHI Student Chapter</div>
+                <div className="flex justify-between items-center gap-4 text-[14px] leading-tight md:text-[28px] md:leading-[33px]">
+                    <span>IIIT Delhi’s ACM SIGCHI Student Chapter</span>
                     <div className="flex gap-[15px] md:gap-[30px]">
                         <Link to="">
                             <img

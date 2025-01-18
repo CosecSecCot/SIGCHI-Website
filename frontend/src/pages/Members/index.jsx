@@ -40,7 +40,7 @@ const coreTeam = [
     {
         name: "Jagjot Singh",
         position: "Head of Web Dev",
-        image: "",
+        image: "/images/members/member6.jpeg",
     },
     {
         name: "Sarabjeet Singh",
