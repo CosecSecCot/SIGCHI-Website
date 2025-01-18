@@ -34,7 +34,7 @@ export default function WhatIsACMSIGCHISection() {
                 </div>
 
                 <div className="relative flex-1 hidden lg:flex justify-end">
-                    <img src="/element2.svg" alt="" />
+                    <img src="/images/home/image2.svg" alt="" />
                 </div>
             </section>
         </article>

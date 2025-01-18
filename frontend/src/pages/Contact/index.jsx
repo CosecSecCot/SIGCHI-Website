@@ -1,9 +1,30 @@
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import ContactCard from "./ContactCard";
-import { useGSAP } from "@gsap/react";
+
+const contactDetails = [
+    {
+        icon: <img src="/icons/mail.svg" alt="" />,
+        title: "sigchi@iiitd.ac.in",
+        subtitle:
+            "Reach us via email for detailed inquiries or support. Our team is happy to assist you with any questions or requests.",
+    },
+    {
+        icon: <img src="/icons/instagram.svg" alt="" />,
+        title: "@sigchi.iiitd",
+        subtitle:
+            "Stay updated on our latest activities and events by following us on Instagram. DM us for any inquiries or feedback!",
+    },
+    {
+        icon: <img src="/icons/linkedin.svg" alt="" />,
+        title: "Linkedin : ACM SIGCHI IIIT Delhi ",
+        subtitle:
+            "Let’s connect on LinkedIn! Follow SIGCHI for professional updates, and feel free to reach out for collaboration or questions.",
+    },
+];
 
 export default function ContactPage() {
     useGSAP(() => {
@@ -64,13 +85,16 @@ export default function ContactPage() {
                     </article>
                     <article className="items-start mt-[30px] sm:mt-[60px] mx-[31px] sm:mx-[80px] flex justify-center">
                         <section className="contact-info-container flex gap-[24px] items-center max-w-[1120px] flex-wrap lg:flex-nowrap justify-center">
-                            {new Array(3).fill(0).map((_, idx) => (
-                                <ContactCard
-                                    key={idx}
-                                    title="sigchi@iiitd.ac.in"
-                                    subtitle="We are a collective of diverse thinkers reimagining how human-technology interactions can be seamless and meaningful."
-                                />
-                            ))}
+                            {contactDetails.map(
+                                ({ icon, title, subtitle }, idx) => (
+                                    <ContactCard
+                                        key={idx}
+                                        icon={icon}
+                                        title={title}
+                                        subtitle={subtitle}
+                                    />
+                                )
+                            )}
                         </section>
                     </article>
                 </main>

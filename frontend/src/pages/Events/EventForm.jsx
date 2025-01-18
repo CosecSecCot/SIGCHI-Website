@@ -25,9 +25,6 @@ export default function EventForm({ onSubmit }) {
                     className="min-w-[200px] pl-[24px] sm:pl-[30px] pr-[75px] py-[10px] sm:py-[12px] border-2 border-persian-blue text-persian-blue bg-white rounded-full appearance-none focus:outline-none cursor-pointer"
                 >
                     <option value="">Event Types</option>
-                    <option value="workshop">Workshop</option>
-                    <option value="seminar">Seminar</option>
-                    <option value="conference">Conference</option>
                 </select>
                 <DownArrow className="absolute w-[30px] h-auto right-[24px] sm:right-[30px] top-1/2 transform -translate-y-1/2 pointer-events-none stroke-persian-blue" />
             </div>
@@ -37,9 +34,6 @@ export default function EventForm({ onSubmit }) {
                     className="min-w-[200px] pl-[24px] sm:pl-[30px] pr-[75px] py-[10px] sm:py-[12px] border-2 border-persian-blue text-persian-blue bg-white rounded-full appearance-none focus:outline-none cursor-pointer"
                 >
                     <option value="">Location</option>
-                    <option value="lorem-small">Lorem, ipsum.</option>
-                    <option value="lorem-large">Lorem ipsum dolor sit.</option>
-                    <option value="remote">Remote</option>
                 </select>
                 <DownArrow className="absolute w-[30px] h-auto right-[24px] sm:right-[30px] top-1/2 transform -translate-y-1/2 pointer-events-none stroke-persian-blue" />
             </div>

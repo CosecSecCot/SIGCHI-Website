@@ -45,22 +45,22 @@ export default function EventCard({
                         alt={title}
                         className="max-h-[400px] rounded-xl object-cover"
                     />
-                    <div className="space-y-[67px]">
+                    <div className="space-y-[50px] sm:space-y-[67px]">
                         <div className="space-y-2">
-                            <h3 className="font-agdasima text-persian-blue text-[24px] leading-[28px]">
+                            <h3 className="font-agdasima text-persian-blue text-[17px] leading-[21px] sm:text-[24px] sm:leading-[28px]">
                                 {formatDate(date)}
                             </h3>
-                            <h2 className="text-[51px] leading-[56px]">
+                            <h2 className="text-[38px] leading-[42px] sm:text-[51px] sm:leading-[56px]">
                                 {title}
                             </h2>
-                            <p className="font-extralight text-[20px] leading-[25px] md:w-[80%] xl:w-[70%]">
+                            <p className="font-extralight text-[15px] leading-[18px] sm:text-[20px] sm:leading-[25px] md:w-[80%] xl:w-[70%]">
                                 {subtitle}
                             </p>
                         </div>
                         <div>
                             <Link
                                 to=""
-                                className="w-fit font-agdasima text-persian-blue text-[24px] leading-[28px] flex gap-[12px] hover:gap-[14px] border-b sm:border-b-2 border-b-persian-blue border-opacity-0 hover:border-opacity-100 items-center transition-all"
+                                className="w-fit font-agdasima text-persian-blue text-[18px] leading-[21px] sm:text-[24px] sm:leading-[28px] flex gap-[12px] hover:gap-[14px] border-b sm:border-b-2 border-b-persian-blue border-opacity-0 hover:border-opacity-100 items-center transition-all"
                             >
                                 VIEW EVENT DETAILS
                                 <RightArrow className="w-[24px] h-auto stroke-persian-blue" />
