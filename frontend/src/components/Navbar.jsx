@@ -94,14 +94,14 @@ export default function Navbar() {
                     >
                         EVENTS &amp; WORKSHOPS
                     </NavLink>
-                    <NavLink
+                    {/* <NavLink
                         to="/resources"
                         className={(e) =>
                             e.isActive ? "text-persian-blue" : ""
                         }
                     >
                         RESOURCES
-                    </NavLink>
+                    </NavLink> */}
                     <NavLink
                         to="/contact"
                         className={(e) =>
@@ -141,9 +141,9 @@ export default function Navbar() {
                         <Link to="/events" className="navlink">
                             EVENTS &amp; WORKSHOPS
                         </Link>
-                        <Link to="/resources" className="navlink">
+                        {/* <Link to="/resources" className="navlink">
                             RESOURCES
-                        </Link>
+                        </Link> */}
                         <Link to="/contact" className="navlink">
                             CONTACT US
                         </Link>
