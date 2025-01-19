@@ -8,6 +8,157 @@ import Navbar from "../../components/Navbar";
 import ActivityCard from "./ActivityCard";
 import { useRef } from "react";
 
+const aboutUsData = [
+    {
+        icon: (
+            <img
+                src="/icons/star_bold.svg"
+                alt=""
+                className="w-[27px] sm:w-[35px]"
+            />
+        ),
+        title: "Purpose of the SIGCHI Chapter",
+        description:
+            "The SIGCHI chapter at IIIT Delhi aims to advance human-computer interaction through innovation and collaboration.",
+    },
+    {
+        icon: (
+            <img
+                src="/icons/activity_bold.svg"
+                alt=""
+                className="w-[27px] sm:w-[35px]"
+            />
+        ),
+        title: "Collaboration and Networking",
+        description:
+            "The chapter brings together students from various fields to collaborate on ideas and projects.",
+    },
+    {
+        icon: (
+            <img
+                src="/icons/shopping_cart_bold.svg"
+                alt=""
+                className="w-[27px] sm:w-[35px]"
+            />
+        ),
+        title: "SIGCHI Project Development",
+        description:
+            "Members are encouraged to work on innovative projects that address real-world challenges.",
+    },
+    {
+        icon: (
+            <img
+                src="/icons/document_bold.svg"
+                alt=""
+                className="w-[27px] sm:w-[35px]"
+            />
+        ),
+        title: "Research Support in HCI Field",
+        description:
+            "The chapter supports students in conducting HCI research and publishing papers.",
+    },
+    {
+        icon: (
+            <img
+                src="/icons/award_bold.svg"
+                alt=""
+                className="w-[27px] sm:w-[35px]"
+            />
+        ),
+        title: "Shaping the Future in HCI Domain",
+        description:
+            "By blending design, research, and development, the chapter empowers students to create meaningful solutions.",
+    },
+    {
+        icon: (
+            <img
+                src="/icons/sunrise_bold.svg"
+                alt=""
+                className="w-[27px] sm:w-[35px]"
+            />
+        ),
+        title: "Skill Development in SIGCHI Activities",
+        description:
+            "By blending design, research, and development, the chapter empowers students to create meaningful solutions.",
+    },
+];
+
+const ourTeamsData = [
+    {
+        icon: (
+            <img
+                src="/icons/home_bold.svg"
+                alt=""
+                className="w-[27px] sm:w-[35px]"
+            />
+        ),
+        title: "SIGCHI Action Cohort",
+        description:
+            "The foundational team encompassing all members, working together to support the chapter's vision and ensure seamless collaboration.",
+        style: "inverted",
+    },
+    {
+        icon: (
+            <img
+                src="/icons/activity_bold.svg"
+                alt=""
+                className="w-[27px] sm:w-[35px]"
+            />
+        ),
+        title: "Event & Curation Management Team",
+        description:
+            "Responsible for planning, organizing, and curating engaging events, workshops, and discussions that promote SIGCHI’s mission.",
+    },
+    {
+        icon: (
+            <img
+                src="/icons/report_bold.svg"
+                alt=""
+                className="w-[27px] sm:w-[35px]"
+            />
+        ),
+        title: "Marketing and Public Relations Team",
+        description:
+            "Handles the chapter's outreach and branding through impactful communication strategies, social media engagement, and public relations.",
+    },
+    {
+        icon: (
+            <img
+                src="/icons/edit_2_bold.svg"
+                alt=""
+                className="w-[27px] sm:w-[35px]"
+            />
+        ),
+        title: "Design & Creatives Team",
+        description:
+            "Focuses on creating visually appealing designs, promotional materials, and innovative user experiences to amplify the chapter's initiatives.",
+    },
+    {
+        icon: (
+            <img
+                src="/icons/two_user_bold.svg"
+                alt=""
+                className="w-[27px] sm:w-[35px]"
+            />
+        ),
+        title: "Outreach & Collaboration Team",
+        description:
+            "Builds connections with industry professionals, other chapters, and student organizations to foster collaborations and expand the chapter's impact.",
+    },
+    {
+        icon: (
+            <img
+                src="/icons/presentation_bold.svg"
+                alt=""
+                className="w-[27px] sm:w-[35px]"
+            />
+        ),
+        title: "Web Development and Tech Team",
+        description:
+            "Develops and maintains the chapter's digital presence, including the website and tools, ensuring a smooth user experience.",
+    },
+];
+
 export default function AboutUsPage() {
     const coverImage = useRef();
 
@@ -70,14 +221,17 @@ export default function AboutUsPage() {
                         </div>
                     </div>
                     <section className="activity-card-container-1 grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-x-[40px] gap-y-[48px]">
-                        {new Array(6).fill(0).map((_, idx) => (
-                            <ActivityCard
-                                key={idx}
-                                title="Diversity in Human Centric Design"
-                                description="We are a collective of diverse thinkers reimagining how human-technology interactions can be seamless and meaningful."
-                                iconWithBar={true}
-                            />
-                        ))}
+                        {aboutUsData.map(
+                            ({ icon, title, description }, idx) => (
+                                <ActivityCard
+                                    key={idx}
+                                    title={title}
+                                    description={description}
+                                    icon={icon}
+                                    iconWithBar
+                                />
+                            )
+                        )}
                     </section>
                 </article>
                 <article className="mt-[69px] sm:mt-[112px] mx-[31px] sm:mx-[80px] mb-[88px] ">
@@ -89,15 +243,19 @@ export default function AboutUsPage() {
                         />
                     </div>
                     <section className="mt-[35px] w-full flex justify-center">
-                        <div className="activity-card-container-2 flex flex-wrap gap-x-[80px] gap-y-[48px] justify-center max-w-[1135px]">
-                            {new Array(6).fill(0).map((_, idx) => (
-                                <ActivityCard
-                                    key={idx}
-                                    title="Diversity in Human Centric Design"
-                                    description="We are a collective of diverse thinkers reimagining how human-technology interactions can be seamless and meaningful."
-                                    size="lg"
-                                />
-                            ))}
+                        <div className="activity-card-container-2 flex flex-wrap gap-x-[80px] gap-y-[48px] justify-center max-w-[1216px]">
+                            {ourTeamsData.map(
+                                ({ icon, title, description, style }, idx) => (
+                                    <ActivityCard
+                                        style={style}
+                                        key={idx}
+                                        title={title}
+                                        description={description}
+                                        icon={icon}
+                                        size="lg"
+                                    />
+                                )
+                            )}
                         </div>
                     </section>
                 </article>
