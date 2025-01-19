@@ -10,10 +10,9 @@ const events = [
     {
         number: "01",
         date: "Friday, 7th Feburary 2025",
-        title: "Science Design Cafe",
+        title: "Inauguration Event",
         subtitle: "at IIIT Delhi",
-        description:
-            "We are a collective of diverse thinkers reimagining how human.",
+        description: "Launching our chapter with amazing activities planned",
         image: "/images/home/image1.svg",
     },
 ];
