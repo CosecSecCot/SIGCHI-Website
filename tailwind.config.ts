@@ -8,6 +8,10 @@ export default {
     ],
     theme: {
         extend: {
+            fontFamily: {
+                barlow: "var(--font-barlow-condensed)",
+                agdasima: "var(--font-agdasima)",
+            },
             colors: {
                 "persian-blue": "#1a36c0",
             },
