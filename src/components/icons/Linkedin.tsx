@@ -1,20 +1,11 @@
-import PropTypes from "prop-types";
-
 /**
  *
  * Linkedin Icon
  *
- * @component
- *
  * @example
  * <Linkedin className="w-4 h-auto aspect-square" />
- *
- * @param {Object} props - Component props.
- * @param {string|undefined} props.className - className
- * @returns {JSX.Element} The Linkedin Icon.
- *
  */
-export default function Linkedin({ className }) {
+export default function Linkedin({ className }: { className?: string }) {
     return (
         <svg
             width="20"
@@ -31,7 +22,3 @@ export default function Linkedin({ className }) {
         </svg>
     );
 }
-
-Linkedin.propTypes = {
-    className: PropTypes.string,
-};

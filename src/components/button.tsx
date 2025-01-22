@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-
 /**
  *
  * Button Component
@@ -7,14 +5,6 @@ import PropTypes from "prop-types";
  *
  * Children of this component are arranged by `flex` property with a gap of `8px`.
  * For further customization, one can wrap the children in a `div`.
- *
- * @component
- * @param {Object} props - Component props.
- * @param {boolean} props.disabled - Disables the button when true.
- * @param {Function} props.onClick - Callback function to handle button click.
- * @param {"submit" | "reset" | "button" | undefined} props.type - Button type.
- * @param {React.ReactNode} props.children - Content to render inside the button.
- * @returns {JSX.Element} The button component.
  *
  * @example
  * <Button onClick={handleClick} disabled={false}>
@@ -36,6 +26,11 @@ export default function Button({
     onClick,
     type = "button",
     children,
+}: {
+    disabled?: boolean;
+    onClick?: () => void;
+    type?: "submit" | "reset" | "button";
+    children: React.ReactNode | string;
 }) {
     return (
         <button
@@ -52,10 +47,3 @@ export default function Button({
         </button>
     );
 }
-
-Button.propTypes = {
-    disabled: PropTypes.bool,
-    onClick: PropTypes.func,
-    type: PropTypes.oneOf(["submit", "reset", "button"]),
-    children: PropTypes.node.isRequired,
-};

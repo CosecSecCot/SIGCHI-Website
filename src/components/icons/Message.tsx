@@ -1,20 +1,11 @@
-import PropTypes from "prop-types";
-
 /**
  *
  * Message Icon
  *
- * @component
- *
  * @example
  * <Message className="w-4 h-auto aspect-square" />
- *
- * @param {Object} props - Component props.
- * @param {string|undefined} props.className - className
- * @returns {JSX.Element} The Message Icon.
- *
  */
-export default function Message({ className }) {
+export default function Message({ className }: { className?: string }) {
     return (
         <svg
             width="20"
@@ -31,7 +22,3 @@ export default function Message({ className }) {
         </svg>
     );
 }
-
-Message.propTypes = {
-    className: PropTypes.string,
-};

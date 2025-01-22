@@ -1,20 +1,11 @@
-import PropTypes from "prop-types";
-
 /**
  *
  * Instagram Icon
  *
- * @component
- *
  * @example
  * <Instagram className="w-4 h-auto aspect-square" />
- *
- * @param {Object} props - Component props.
- * @param {string|undefined} props.className - className
- * @returns {JSX.Element} The Instagram Icon.
- *
  */
-export default function Instagram({ className }) {
+export default function Instagram({ className }: { className?: string }) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +18,3 @@ export default function Instagram({ className }) {
         </svg>
     );
 }
-
-Instagram.propTypes = {
-    className: PropTypes.string,
-};

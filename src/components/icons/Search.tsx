@@ -1,20 +1,11 @@
-import PropTypes from "prop-types";
-
 /**
  *
  * Search Icon
  *
- * @component
- *
  * @example
  * <Search className="w-4 h-auto aspect-square" />
- *
- * @param {Object} props - Component props.
- * @param {string|undefined} props.className - className
- * @returns {JSX.Element} The Search Icon.
- *
  */
-export default function Search({ className }) {
+export default function Search({ className }: { className?: string }) {
     return (
         <svg
             width="24"
@@ -43,7 +34,3 @@ export default function Search({ className }) {
         </svg>
     );
 }
-
-Search.propTypes = {
-    className: PropTypes.string,
-};

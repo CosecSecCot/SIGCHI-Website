@@ -2,14 +2,11 @@
 
 import gsap from "gsap";
 import { useRef, useState } from "react";
-import PropTypes from "prop-types";
 import { useGSAP } from "@gsap/react";
-import DownArrow from "./icons/DownArrow";
+import DownArrow from "@/components/icons/DownArrow";
 
 /**
  * DropdownMenu component renders a dropdown with a title and customizable items.
- *
- * @component
  *
  * @example
  *
@@ -21,13 +18,16 @@ import DownArrow from "./icons/DownArrow";
  *         <a href="#option2">Option 2</a>
  *     </DropdownItem>
  * </DropdownMenu>
- *
- * @param {string} title - The title displayed for the dropdown button.
- * @param {React.ReactNode} children - The items to display in the dropdown.
  */
-export function DropdownMenu({ title, children }) {
+export function DropdownMenu({
+    title,
+    children,
+}: {
+    title: string;
+    children: React.ReactNode;
+}) {
     const [isOpen, setIsOpen] = useState(false);
-    const dropdownContainer = useRef();
+    const dropdownContainer = useRef(null);
 
     const { contextSafe } = useGSAP();
 
@@ -98,30 +98,13 @@ export function DropdownMenu({ title, children }) {
     );
 }
 
-DropdownMenu.propTypes = {
-    title: PropTypes.string.isRequired,
-    children: PropTypes.node.isRequired,
-};
-
 /**
  * DropdownItem component renders a single item inside a dropdown menu.
- *
- * @component
- * @param {React.ReactNode} children - The content of the dropdown item.
- * @param {function} [onClick] - The callback function triggered when the item is clicked.
  */
-export function DropdownItem({ children, onClick }) {
+export function DropdownItem({ children }: { children: React.ReactNode }) {
     return (
-        <li
-            className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-            onClick={onClick}
-        >
+        <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
             {children}
         </li>
     );
 }
-
-DropdownItem.propTypes = {
-    children: PropTypes.node.isRequired,
-    onClick: PropTypes.func,
-};

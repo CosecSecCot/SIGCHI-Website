@@ -1,20 +1,11 @@
-import PropTypes from "prop-types";
-
 /**
  *
  * Down Arrow Icon
  *
- * @component
- *
  * @example
  * <DownArrow className="w-4 h-auto aspect-square" />
- *
- * @param {Object} props - Component props.
- * @param {string|undefined} props.className - className
- * @returns {JSX.Element} The DownArrow Icon.
- *
  */
-export default function DownArrow({ className }) {
+export default function DownArrow({ className }: { className?: string }) {
     return (
         <svg
             width="30"
@@ -34,7 +25,3 @@ export default function DownArrow({ className }) {
         </svg>
     );
 }
-
-DownArrow.propTypes = {
-    className: PropTypes.string,
-};

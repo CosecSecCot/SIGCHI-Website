@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-
 /**
  *
  * Right Arrow Icon
@@ -8,13 +6,8 @@ import PropTypes from "prop-types";
  *
  * @example
  * <RightArrow className="w-4 h-auto aspect-square" />
- *
- * @param {Object} props - Component props.
- * @param {string|undefined} props.className - className
- * @returns {JSX.Element} The RightArrow Icon.
- *
  */
-export default function RightArrow({ className }) {
+export default function RightArrow({ className }: { className: string }) {
     return (
         <svg
             width="34"
@@ -39,7 +32,3 @@ export default function RightArrow({ className }) {
         </svg>
     );
 }
-
-RightArrow.propTypes = {
-    className: PropTypes.string,
-};

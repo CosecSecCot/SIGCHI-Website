@@ -1,9 +1,11 @@
 "use client";
+
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
-import { DropdownItem, DropdownMenu } from "./DropdownMenu";
+import { DropdownItem, DropdownMenu } from "@/components/dropdown-menu";
 import Link from "next/link";
+import Image from "next/image";
 
 /**
  * Navbar Component
@@ -11,19 +13,15 @@ import Link from "next/link";
  * A responsive navigation bar. It includes a desktop menu and a mobile overlay
  * menu with animated transitions using GSAP.
  *
- * @component
- *
  * @example
  * <Navbar />
- *
- * @returns {JSX.Element} The Navbar component.
  *
  * @dependencies
  * - `gsap`: For animations.
  * - `@gsap/react`: React integration for GSAP.
  */
 export default function Navbar() {
-    const overlayRef = useRef();
+    const overlayRef = useRef(null);
 
     const { contextSafe } = useGSAP({ scope: overlayRef });
 
@@ -71,9 +69,11 @@ export default function Navbar() {
                     href="/"
                     className="flex items-center gap-2 flex-shrink-0"
                 >
-                    <img
+                    <Image
                         src="/logo1.svg"
-                        alt="SIGCHI Logo"
+                        width={48}
+                        height={50}
+                        alt="logo"
                         className="w-[32px] h-[33px] sm:w-auto sm:h-auto"
                     />
                     <span className="text-persian-blue text-[24px] sm:text-[30px]">
@@ -102,7 +102,12 @@ export default function Navbar() {
                     className="flex justify-end lg:hidden"
                     onClick={onMenuOpen}
                 >
-                    <img src="/Hamburger.svg" alt="menu" />
+                    <Image
+                        src="/Hamburger.svg"
+                        width={38}
+                        height={38}
+                        alt="menu"
+                    />
                 </button>
             </nav>
             <div
@@ -111,7 +116,12 @@ export default function Navbar() {
             >
                 <div className="absolute top-0 right-0 p-4">
                     <button className="" onClick={onMenuClose}>
-                        <img src="/Cross.svg" alt="exit" />
+                        <Image
+                            src="/Cross.svg"
+                            width={80}
+                            height={81}
+                            alt="exit"
+                        />
                     </button>
                 </div>
                 <div className="h-full flex flex-col items-center justify-center gap-[100px]">
@@ -135,7 +145,7 @@ export default function Navbar() {
                             CONTACT US
                         </Link>
                     </div>
-                    <img
+                    <Image
                         src="/logo2.svg"
                         alt="IIITD SIG CHI"
                         width={160}
