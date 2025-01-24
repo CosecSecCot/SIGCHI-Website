@@ -1,22 +1,22 @@
 "use client";
 
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import Button from "@/components/button";
 import RightArrow from "@/components/icons/RightArrow";
+
+type FormValues = {
+    email: string;
+    description: string;
+};
 
 export default function ExpressYourIdeasSection() {
     const {
         register,
         handleSubmit,
         formState: { errors, isSubmitting },
-    } = useForm();
+    } = useForm<FormValues>();
 
-    const onSubmit = async (data: unknown) => {
-        await new Promise((resolve) => {
-            setTimeout(() => {
-                resolve();
-            }, 1000);
-        });
+    const onSubmit: SubmitHandler<FormValues> = async (data) => {
         console.log(data);
     };
 
@@ -52,7 +52,6 @@ export default function ExpressYourIdeasSection() {
                         )}
                         <input
                             id="email"
-                            name="email"
                             autoComplete="email"
                             placeholder="Enter Email..."
                             className="border sm:border-2 border-persian-blue rounded-[4px] outline-none px-[12px] py-[8px] sm:py-[17px] sm:px-[24px] text-[11px] leading-[13px] sm:text-[20px] sm:leading-[25px]"
@@ -82,7 +81,6 @@ export default function ExpressYourIdeasSection() {
                         )}
                         <textarea
                             id="description"
-                            name="description"
                             placeholder="Enter Description..."
                             className="h-[91px] sm:h-[175px] border sm:border-2 border-persian-blue rounded-[4px] outline-none px-[12px] py-[8px] sm:py-[17px] sm:px-[24px] text-[11px] leading-[13px] sm:text-[20px] sm:leading-[25px]"
                             {...register("description", {

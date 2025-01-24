@@ -9,7 +9,7 @@ export default function ActivityCard({
     title: string;
     description: string;
     icon: React.ReactNode;
-    iconWithBar: boolean;
+    iconWithBar?: boolean;
     size?: "sm" | "lg";
     style?: "inverted" | "default";
 }) {
