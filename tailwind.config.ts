@@ -1,0 +1,21 @@
+import type { Config } from "tailwindcss";
+
+export default {
+    content: [
+        "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+        "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+        "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    ],
+    theme: {
+        extend: {
+            fontFamily: {
+                barlow: "var(--font-barlow-condensed)",
+                agdasima: "var(--font-agdasima)",
+            },
+            colors: {
+                "persian-blue": "#1a36c0",
+            },
+        },
+    },
+    plugins: [],
+} satisfies Config;
