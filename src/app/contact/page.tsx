@@ -9,6 +9,7 @@ import Image from "next/image";
 const contactDetails = [
     {
         icon: <Image src="/icons/mail.svg" width={34} height={27} alt="" />,
+        href: "mailto:sigchi@iiitd.ac.in",
         title: "sigchi@iiitd.ac.in",
         subtitle:
             "Reach us via email for detailed inquiries or support. Our team is happy to assist you with any questions or requests.",
@@ -17,12 +18,14 @@ const contactDetails = [
         icon: (
             <Image src="/icons/instagram.svg" width={29} height={29} alt="" />
         ),
+        href: "https://www.linkedin.com/company/acm-sigchi-iiitd",
         title: "@sigchi.iiitd",
         subtitle:
             "Stay updated on our latest activities and events by following us on Instagram. DM us for any inquiries or feedback!",
     },
     {
         icon: <Image src="/icons/linkedin.svg" width={27} height={27} alt="" />,
+        href: "https://www.linkedin.com/company/acm-sigchi-iiitd",
         title: "Linkedin : ACM SIGCHI IIIT Delhi ",
         subtitle:
             "Let’s connect on LinkedIn! Follow SIGCHI for professional updates, and feel free to reach out for collaboration or questions.",
@@ -86,14 +89,17 @@ export default function ContactPage() {
             </article>
             <article className="items-start mt-[30px] sm:mt-[60px] mx-[31px] sm:mx-[80px] flex justify-center">
                 <section className="contact-info-container flex gap-[24px] items-center max-w-[1120px] flex-wrap lg:flex-nowrap justify-center">
-                    {contactDetails.map(({ icon, title, subtitle }, idx) => (
-                        <ContactCard
-                            key={idx}
-                            icon={icon}
-                            title={title}
-                            subtitle={subtitle}
-                        />
-                    ))}
+                    {contactDetails.map(
+                        ({ icon, href, title, subtitle }, idx) => (
+                            <ContactCard
+                                key={idx}
+                                href={href}
+                                icon={icon}
+                                title={title}
+                                subtitle={subtitle}
+                            />
+                        )
+                    )}
                 </section>
             </article>
         </main>
