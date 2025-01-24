@@ -45,28 +45,34 @@ export default function Footer() {
 
                 <div className="flex justify-between items-center gap-4 text-[14px] leading-tight md:text-[28px] md:leading-[33px]">
                     <span>IIIT Delhi’s ACM SIGCHI Student Chapter</span>
-                    <div className="flex gap-[15px] md:gap-[30px]">
-                        <Link href="">
+                    <div className="flex items-center gap-[15px] md:gap-[30px]">
+                        <Link href="mailto:sigchi@iiitd.ac.in" target="_blank">
                             <Image
-                                src="/twitter.png"
+                                src="/icons/mail.svg"
                                 width={22}
                                 height={22}
                                 alt="twitter"
                                 className="w-[22px] md:w-[45px] h-auto"
                             />
                         </Link>
-                        <Link href="">
+                        <Link
+                            href="https://www.instagram.com/sigchi.iiitd"
+                            target="_blank"
+                        >
                             <Image
-                                src="/instagram.png"
+                                src="/icons/instagram_outline.svg"
                                 width={22}
                                 height={22}
                                 alt="instagram"
                                 className="w-[22px] md:w-[45px] h-auto"
                             />
                         </Link>
-                        <Link href="">
+                        <Link
+                            href="https://www.linkedin.com/company/acm-sigchi-iiitd"
+                            target="_blank"
+                        >
                             <Image
-                                src="/linkedin.png"
+                                src="/icons/linkedin.svg"
                                 width={22}
                                 height={22}
                                 alt="linkedin"
