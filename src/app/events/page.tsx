@@ -25,7 +25,7 @@ export default function EventsPage() {
                 clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
                 ease: "power4.inOut",
                 stagger: 0.15,
-                duration: 0.5,
+                duration: 1.5,
             }
         );
     });

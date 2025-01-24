@@ -2,10 +2,19 @@
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
-import { DropdownItem, DropdownMenu } from "@/components/dropdown-menu";
+import { useRef, useState } from "react";
+import { DropdownMenu } from "@/components/dropdown-menu";
 import Link from "next/link";
 import Image from "next/image";
+
+const navlinks: { label: string; path: string }[] = [
+    { label: "HOME", path: "/" },
+    { label: "ABOUT US", path: "/aboutus" },
+    // { label: "RESOURCES", path: "/resources" },
+    { label: "MEMBERS", path: "/members" },
+    { label: "EVENTS & WORKSHOPS", path: "/events" },
+    { label: "CONTACT US", path: "/contact" },
+];
 
 /**
  * Navbar Component
@@ -22,45 +31,64 @@ import Image from "next/image";
  */
 export default function Navbar() {
     const overlayRef = useRef(null);
+    const timeline = useRef<gsap.core.Timeline>(null);
 
-    const { contextSafe } = useGSAP({ scope: overlayRef });
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const onMenuOpen = contextSafe(() => {
-        const timeline = gsap.timeline();
-        timeline.to(overlayRef.current, {
-            y: "0%",
-            duration: 0.5,
-            ease: "power4.out",
-        });
+    useGSAP(
+        () => {
+            timeline.current = gsap.timeline({ paused: true });
+            timeline.current
+                .to(overlayRef.current, {
+                    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+                    duration: 0.5,
+                    ease: "power4.out",
+                })
+                .fromTo(
+                    ".navlink",
+                    {
+                        opacity: 0,
+                        y: 30,
+                        clipPath:
+                            "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+                    },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+                        duration: 0.5,
+                        ease: "power3.out",
+                        stagger: 0.1,
+                    },
+                    "-=0.5"
+                )
+                .fromTo(
+                    ".navlogo-large",
+                    {
+                        opacity: 0,
+                        y: "30%",
+                        clipPath:
+                            "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+                    },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+                        duration: 0.5,
+                        ease: "power4",
+                    },
+                    "-=0.5"
+                );
+        },
+        { scope: overlayRef }
+    );
 
-        timeline.fromTo(
-            ".navlink",
-            { opacity: 0, y: 30 },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 0.5,
-                ease: "power3.out",
-                stagger: 0.1,
-            },
-            "-=0.5"
-        );
-
-        timeline.fromTo(
-            ".navlogo-large",
-            { opacity: 0, scale: 0.8 },
-            { opacity: 1, scale: 1, duration: 0.5, ease: "power4" },
-            "-=0.6"
-        );
-    });
-
-    const onMenuClose = contextSafe(() => {
-        gsap.to(overlayRef.current, {
-            y: "-100%",
-            ease: "power4.in",
-            duration: 0.4,
-        });
-    });
+    const toggleMenu = () => {
+        if (!isMenuOpen) {
+            timeline.current?.play();
+        }
+        setIsMenuOpen(!isMenuOpen);
+    };
 
     return (
         <header className="relative w-full px-4 sm:px-9 py-8 font-barlow z-40">
@@ -83,13 +111,20 @@ export default function Navbar() {
                 </Link>
                 <div className="lg:flex gap-11 text-2xl hidden">
                     <DropdownMenu title="ABOUT">
-                        <DropdownItem>
-                            <Link href="/aboutus">ABOUT US</Link>
-                        </DropdownItem>
-                        <DropdownItem>
-                            <Link href="/members">MEMBERS</Link>
-                        </DropdownItem>
+                        <Link
+                            href="/aboutus"
+                            className="block w-full px-4 py-2"
+                        >
+                            ABOUT US
+                        </Link>
+                        <Link
+                            href="/members"
+                            className="block w-full px-4 py-2"
+                        >
+                            MEMBERS
+                        </Link>
                     </DropdownMenu>
+
                     <Link href="/events">EVENTS &amp; WORKSHOPS</Link>
                     {/* <Link
                         href="/resources"
@@ -100,7 +135,7 @@ export default function Navbar() {
                 </div>
                 <button
                     className="flex justify-end lg:hidden"
-                    onClick={onMenuOpen}
+                    onClick={toggleMenu}
                 >
                     <Image
                         src="/Hamburger.svg"
@@ -112,10 +147,13 @@ export default function Navbar() {
             </nav>
             <div
                 ref={overlayRef}
-                className="fixed z-50 top-0 left-0 w-full h-full bg-persian-blue translate-y-[-100%] overflow-hidden"
+                className="fixed z-50 top-0 left-0 w-full h-full bg-persian-blue overflow-hidden"
+                style={{
+                    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+                }}
             >
                 <div className="absolute top-0 right-0 p-4">
-                    <button className="" onClick={onMenuClose}>
+                    <button className="" onClick={toggleMenu}>
                         <Image
                             src="/Cross.svg"
                             width={80}
@@ -126,32 +164,26 @@ export default function Navbar() {
                 </div>
                 <div className="h-full flex flex-col items-center justify-center gap-[100px]">
                     <div className="flex flex-col items-center gap-[17px] text-[32px] text-white font-medium text-opacity-90">
-                        <Link href="/" className="navlink">
-                            HOME
-                        </Link>
-                        <Link href="/aboutus" className="navlink">
-                            ABOUT US
-                        </Link>
-                        <Link href="/members" className="navlink">
-                            MEMBERS
-                        </Link>
-                        <Link href="/events" className="navlink">
-                            EVENTS &amp; WORKSHOPS
-                        </Link>
-                        {/* <Link href="/resources" className="navlink">
-                            RESOURCES
-                        </Link> */}
-                        <Link href="/contact" className="navlink">
-                            CONTACT US
-                        </Link>
+                        {navlinks.map(({ label, path }, idx) => {
+                            return (
+                                <Link
+                                    key={idx}
+                                    href={path}
+                                    onClick={toggleMenu}
+                                    className="navlink"
+                                >
+                                    {label}
+                                </Link>
+                            );
+                        })}
+                        <Image
+                            src="/logo2.svg"
+                            alt="IIITD SIG CHI"
+                            width={160}
+                            height={164}
+                            className="navlogo-large hidden [@media(min-height:800px)]:block"
+                        />
                     </div>
-                    <Image
-                        src="/logo2.svg"
-                        alt="IIITD SIG CHI"
-                        width={160}
-                        height={164}
-                        className="navlogo-large hidden [@media(min-height:800px)]:block"
-                    />
                 </div>
             </div>
         </header>

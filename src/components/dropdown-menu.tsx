@@ -1,7 +1,7 @@
 "use client";
 
 import gsap from "gsap";
-import { useRef, useState } from "react";
+import { Children, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import DownArrow from "@/components/icons/DownArrow";
 
@@ -18,6 +18,10 @@ import DownArrow from "@/components/icons/DownArrow";
  *         <a href="#option2">Option 2</a>
  *     </DropdownItem>
  * </DropdownMenu>
+ *
+ * @dependencies
+ * - `gsap`: For animations.
+ * - `@gsap/react`: React integration for GSAP.
  */
 export function DropdownMenu({
     title,
@@ -28,40 +32,28 @@ export function DropdownMenu({
 }) {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownContainer = useRef(null);
+    const timeline = useRef<gsap.core.Timeline>(null);
 
-    const { contextSafe } = useGSAP();
-
-    const closeMenu = contextSafe(() =>
-        gsap.fromTo(
+    useGSAP(() => {
+        timeline.current = gsap.timeline({ paused: true });
+        timeline.current.fromTo(
             dropdownContainer.current,
-            { y: 0, opacity: 1 },
             {
-                y: -10,
-                opacity: 0,
+                clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+            },
+            {
+                clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
                 duration: 0.25,
                 ease: "power4.inOut",
             }
-        )
-    );
-
-    const openMenu = contextSafe(() =>
-        gsap.fromTo(
-            dropdownContainer.current,
-            { y: -10, opacity: 0 },
-            {
-                y: 0,
-                opacity: 1,
-                duration: 0.25,
-                ease: "power4.inOut",
-            }
-        )
-    );
+        );
+    });
 
     const toggleDropdown = () => {
         if (isOpen) {
-            closeMenu();
+            timeline.current?.reverse();
         } else {
-            openMenu();
+            timeline.current?.play();
         }
         setIsOpen(!isOpen);
     };
@@ -79,32 +71,24 @@ export function DropdownMenu({
                     }`}
                 />
             </button>
-            {/* isOpen && (
-                <div
-                    ref={dropdownContainer}
-                    className="absolute top-full -left-4 mt-2 min-w-48 bg-white border border-gray-300 rounded-md shadow-lg z-40"
-                >
-                    <ul className="py-2">{children}</ul>
-                </div>
-            ) */}
-
             <div
                 ref={dropdownContainer}
                 className={`absolute ${isOpen ? "" : "hidden"} top-full -left-4 mt-6 min-w-48 bg-white border-t-persian-blue border-t-4 border border-gray-300 rounded-bl-lg rounded-br-lg shadow-lg z-40`}
             >
-                <ul className="py-2">{children}</ul>
+                <ul className="py-2">
+                    {Children.map(Children.toArray(children), (child, idx) => {
+                        return (
+                            <li
+                                key={idx}
+                                onClick={toggleDropdown}
+                                className="hover:bg-gray-100 cursor-pointer"
+                            >
+                                {child}
+                            </li>
+                        );
+                    })}
+                </ul>
             </div>
         </div>
-    );
-}
-
-/**
- * DropdownItem component renders a single item inside a dropdown menu.
- */
-export function DropdownItem({ children }: { children: React.ReactNode }) {
-    return (
-        <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-            {children}
-        </li>
     );
 }
