@@ -84,7 +84,9 @@ export default function Navbar() {
     );
 
     const toggleMenu = () => {
-        if (!isMenuOpen) {
+        if (isMenuOpen) {
+            timeline.current?.reverse();
+        } else {
             timeline.current?.play();
         }
         setIsMenuOpen(!isMenuOpen);
@@ -181,7 +183,7 @@ export default function Navbar() {
                             alt="IIITD SIG CHI"
                             width={160}
                             height={164}
-                            className="navlogo-large hidden [@media(min-height:800px)]:block"
+                            className="navlogo-large hidden [@media(min-height:800px)]:block mt-[96px]"
                         />
                     </div>
                 </div>

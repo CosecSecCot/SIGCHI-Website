@@ -50,9 +50,7 @@ export function DropdownMenu({
     });
 
     const toggleDropdown = () => {
-        if (isOpen) {
-            timeline.current?.reverse();
-        } else {
+        if (!isOpen) {
             timeline.current?.play();
         }
         setIsOpen(!isOpen);
