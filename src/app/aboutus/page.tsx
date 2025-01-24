@@ -95,7 +95,12 @@ const aboutUsData = [
     },
 ];
 
-const ourTeamsData = [
+const ourTeamsData: {
+    icon: React.ReactNode;
+    title: string;
+    description: string;
+    style?: "inverted" | "default";
+}[] = [
     {
         icon: (
             <Image

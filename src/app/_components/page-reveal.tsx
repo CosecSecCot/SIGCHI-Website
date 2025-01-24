@@ -21,8 +21,16 @@ export default function PageReveal() {
                 height={164}
                 alt="logo"
                 className="page-reveal-logo h-auto w-[144px] md:w-[161px]"
+                style={{
+                    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+                }}
             />
-            <h1 className="page-reveal-text font-barlow text-[72px] md:text-[96px] text-white">
+            <h1
+                className="page-reveal-text font-barlow text-[72px] md:text-[96px] text-white"
+                style={{
+                    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+                }}
+            >
                 IIITD SIG <span className="font-bold">CHI.</span>
             </h1>
         </div>

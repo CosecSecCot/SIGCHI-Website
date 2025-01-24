@@ -7,10 +7,6 @@ import EventForm from "@/app/events/event-form";
 import EventCard from "@/app/events/event-card";
 
 export default function EventsPage() {
-    const onFormSubmit = (data) => {
-        console.log(data);
-    };
-
     useGSAP(() => {
         gsap.fromTo(
             ".page-heading>*",
@@ -44,7 +40,7 @@ export default function EventsPage() {
             </section>
             <section className="mx-[31px] sm:mx-[80px] my-[55px]">
                 <div className="flex justify-between gap-4 flex-wrap">
-                    <EventForm onSubmit={onFormSubmit} />
+                    <EventForm />
                     <button
                         type="button"
                         className="ml-6 font-agdasima font-bold text-[20px] leading-[24px] text-persian-blue"

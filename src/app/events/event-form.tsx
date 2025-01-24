@@ -1,17 +1,22 @@
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import DownArrow from "@/components/icons/DownArrow";
 import Search from "@/components/icons/Search";
+
+type FormValues = {
+    eventType: string;
+    location: string;
+    search: string;
+};
 
 /**
  * EventForm.
  * Form to filter or search for events.
  */
-export default function EventForm({
-    onSubmit,
-}: {
-    onSubmit: (args: unknown) => void;
-}) {
-    const { register, handleSubmit } = useForm();
+export default function EventForm() {
+    const { register, handleSubmit } = useForm<FormValues>();
+    const onSubmit: SubmitHandler<FormValues> = (data) => {
+        console.log(data);
+    };
 
     return (
         <form
