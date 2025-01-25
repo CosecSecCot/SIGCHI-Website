@@ -17,7 +17,17 @@ export default function ExpressYourIdeasSection() {
     } = useForm<FormValues>();
 
     const onSubmit: SubmitHandler<FormValues> = async (data) => {
-        console.log(data);
+        const res = await fetch("/api/ideas", {
+            method: "POST",
+            body: JSON.stringify(data),
+        });
+
+        const json = await res.json();
+        if (json.status != "success") {
+            alert("Something went wrong! Please try again...");
+        } else {
+            alert("Your idea has reached us successfully!");
+        }
     };
 
     return (
