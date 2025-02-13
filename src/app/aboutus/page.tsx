@@ -12,7 +12,7 @@ const aboutUsData = [
     {
         icon: (
             <Image
-                src="/icons/star_bold.svg"
+                src="/star_bold.svg"
                 width={27}
                 height={27}
                 alt=""
@@ -26,7 +26,7 @@ const aboutUsData = [
     {
         icon: (
             <Image
-                src="/icons/activity_bold.svg"
+                src="/activity_bold.svg"
                 width={27}
                 height={27}
                 alt=""
@@ -40,7 +40,7 @@ const aboutUsData = [
     {
         icon: (
             <Image
-                src="/icons/shopping_cart_bold.svg"
+                src="/shopping_cart_bold.svg"
                 width={27}
                 height={27}
                 alt=""
@@ -54,7 +54,7 @@ const aboutUsData = [
     {
         icon: (
             <Image
-                src="/icons/document_bold.svg"
+                src="/document_bold.svg"
                 width={27}
                 height={27}
                 alt=""
@@ -68,7 +68,7 @@ const aboutUsData = [
     {
         icon: (
             <Image
-                src="/icons/award_bold.svg"
+                src="/award_bold.svg"
                 width={27}
                 height={27}
                 alt=""
@@ -82,7 +82,7 @@ const aboutUsData = [
     {
         icon: (
             <Image
-                src="/icons/sunrise_bold.svg"
+                src="/sunrise_bold.svg"
                 width={27}
                 height={27}
                 alt=""
@@ -104,7 +104,7 @@ const ourTeamsData: {
     {
         icon: (
             <Image
-                src="/icons/home_bold.svg"
+                src="/home_bold.svg"
                 width={27}
                 height={27}
                 alt=""
@@ -119,7 +119,7 @@ const ourTeamsData: {
     {
         icon: (
             <Image
-                src="/icons/activity_bold.svg"
+                src="/activity_bold.svg"
                 width={27}
                 height={27}
                 alt=""
@@ -133,7 +133,7 @@ const ourTeamsData: {
     {
         icon: (
             <Image
-                src="/icons/report_bold.svg"
+                src="/report_bold.svg"
                 width={27}
                 height={27}
                 alt=""
@@ -147,7 +147,7 @@ const ourTeamsData: {
     {
         icon: (
             <Image
-                src="/icons/edit_2_bold.svg"
+                src="/edit_2_bold.svg"
                 width={27}
                 height={27}
                 alt=""
@@ -161,7 +161,7 @@ const ourTeamsData: {
     {
         icon: (
             <Image
-                src="/icons/two_user_bold.svg"
+                src="/two_user_bold.svg"
                 width={27}
                 height={27}
                 alt=""
@@ -175,7 +175,7 @@ const ourTeamsData: {
     {
         icon: (
             <Image
-                src="/icons/presentation_bold.svg"
+                src="/presentation_bold.svg"
                 width={27}
                 height={27}
                 alt=""

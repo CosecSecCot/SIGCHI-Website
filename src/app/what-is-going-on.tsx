@@ -8,7 +8,7 @@ import img1 from "../../public/images/home/image1.svg";
 const events = [
     {
         number: "01",
-        date: "Friday, 7th Feburary 2025",
+        date: "Tuesday, 25th March 2025",
         title: "Inauguration Event",
         subtitle: "at IIIT Delhi",
         description: "Launching our chapter with amazing activities planned",
@@ -34,6 +34,7 @@ export default function WhatIsGoingOnSection() {
                     return (
                         <HighlightCard
                             key={idx}
+                            href="/events"
                             number={event.number}
                             date={event.date}
                             title={event.title}

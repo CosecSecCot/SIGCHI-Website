@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import Linkedin from "@/components/icons/Linkedin";
+import Instagram from "@/components/icons/Instagram";
+import Message from "@/components/icons/Message";
 
 export default function Footer() {
     return (
@@ -47,37 +50,19 @@ export default function Footer() {
                     <span>IIIT Delhi’s ACM SIGCHI Student Chapter</span>
                     <div className="flex items-center gap-[15px] md:gap-[30px]">
                         <Link href="mailto:sigchi@iiitd.ac.in" target="_blank">
-                            <Image
-                                src="/icons/mail.svg"
-                                width={22}
-                                height={22}
-                                alt="twitter"
-                                className="w-[22px] md:w-[45px] h-auto"
-                            />
+                            <Message className="w-[22px] md:w-[45px] h-auto fill-white" />
                         </Link>
                         <Link
                             href="https://www.instagram.com/sigchi.iiitd"
                             target="_blank"
                         >
-                            <Image
-                                src="/icons/instagram_outline.svg"
-                                width={22}
-                                height={22}
-                                alt="instagram"
-                                className="w-[22px] md:w-[45px] h-auto"
-                            />
+                            <Instagram className="w-[22px] md:w-[45px] h-auto fill-white" />
                         </Link>
                         <Link
                             href="https://www.linkedin.com/company/acm-sigchi-iiitd"
                             target="_blank"
                         >
-                            <Image
-                                src="/icons/linkedin.svg"
-                                width={22}
-                                height={22}
-                                alt="linkedin"
-                                className="w-[22px] md:w-[45px] h-auto"
-                            />
+                            <Linkedin className="w-[22px] md:w-[45px] h-auto fill-white" />
                         </Link>
                     </div>
                 </div>

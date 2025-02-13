@@ -17,16 +17,24 @@ export default function ExpressYourIdeasSection() {
     } = useForm<FormValues>();
 
     const onSubmit: SubmitHandler<FormValues> = async (data) => {
-        const res = await fetch("/api/ideas", {
-            method: "POST",
-            body: JSON.stringify(data),
-        });
+        try {
+            const raw = await fetch(
+                "https://script.google.com/macros/s/AKfycbw9rqLP_ftu5QN494-L_Jk3oJew2Tk70pIsV7taEgBPVK4go6hR0Z3YC8AoYytXMYdz7A/exec",
+                {
+                    method: "POST",
+                    body: JSON.stringify(data),
+                    headers: {
+                        "Content-Type": "text/plain",
+                    },
+                }
+            );
 
-        const json = await res.json();
-        if (json.status != "success") {
-            alert("Something went wrong! Please try again...");
-        } else {
+            const res = await raw.json();
+            console.log(res);
             alert("Your idea has reached us successfully!");
+        } catch (error) {
+            console.log(error);
+            alert("Something went wrong! Please try again...");
         }
     };
 

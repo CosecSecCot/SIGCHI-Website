@@ -8,23 +8,21 @@ import Image from "next/image";
 
 const contactDetails = [
     {
-        icon: <Image src="/icons/mail.svg" width={34} height={27} alt="" />,
+        icon: <Image src="/mail.svg" width={34} height={27} alt="" />,
         href: "mailto:sigchi@iiitd.ac.in",
         title: "sigchi@iiitd.ac.in",
         subtitle:
             "Reach us via email for detailed inquiries or support. Our team is happy to assist you with any questions or requests.",
     },
     {
-        icon: (
-            <Image src="/icons/instagram.svg" width={29} height={29} alt="" />
-        ),
-        href: "https://www.linkedin.com/company/acm-sigchi-iiitd",
+        icon: <Image src="/instagram.svg" width={29} height={29} alt="" />,
+        href: "https://www.instagram.com/sigchi.iiitd",
         title: "@sigchi.iiitd",
         subtitle:
             "Stay updated on our latest activities and events by following us on Instagram. DM us for any inquiries or feedback!",
     },
     {
-        icon: <Image src="/icons/linkedin.svg" width={27} height={27} alt="" />,
+        icon: <Image src="/linkedin.svg" width={27} height={27} alt="" />,
         href: "https://www.linkedin.com/company/acm-sigchi-iiitd",
         title: "Linkedin : ACM SIGCHI IIIT Delhi ",
         subtitle:
