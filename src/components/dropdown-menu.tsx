@@ -64,7 +64,7 @@ export function DropdownMenu({
             >
                 {title}
                 <DownArrow
-                    className={`w-[1.2rem] h-auto transform transition-transform stroke-black ${
+                    className={`w-[1.2rem] h-auto transform transition-transform ${
                         isOpen ? "rotate-180" : "rotate-0"
                     }`}
                 />

@@ -6,6 +6,7 @@ import { useRef, useState } from "react";
 import { DropdownMenu } from "@/components/dropdown-menu";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const navlinks: { label: string; path: string }[] = [
     { label: "HOME", path: "/" },
@@ -92,6 +93,10 @@ export default function Navbar() {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    const pathname = usePathname();
+
+    console.log(pathname);
+
     return (
         <header className="relative w-full px-4 sm:px-9 py-8 font-barlow z-40">
             <nav className="nav-shadow-small sm:nav-shadow px-4 sm:px-11 py-4 flex justify-between items-center bg-white shadow-[#0000001a] rounded-xl">
@@ -111,29 +116,41 @@ export default function Navbar() {
                         <span className="font-bold text-persian-blue">CHI</span>
                     </span>
                 </Link>
-                <div className="lg:flex gap-11 text-2xl hidden">
+                <div
+                    className={`${pathname === "/aboutus/" || pathname === "/members/" ? "text-persian-blue stroke-persian-blue" : "text-black stroke-black"} lg:flex gap-11 text-2xl hidden`}
+                >
                     <DropdownMenu title="ABOUT">
                         <Link
                             href="/aboutus"
-                            className="block w-full px-4 py-2"
+                            className="block w-full px-4 py-2 text-black"
                         >
                             ABOUT US
                         </Link>
                         <Link
                             href="/members"
-                            className="block w-full px-4 py-2"
+                            className="block w-full px-4 py-2 text-black"
                         >
                             MEMBERS
                         </Link>
                     </DropdownMenu>
 
-                    <Link href="/events">EVENTS &amp; WORKSHOPS</Link>
+                    <Link
+                        href="/events"
+                        className={`${pathname === "/events/" ? "text-persian-blue" : "text-black"}`}
+                    >
+                        EVENTS &amp; WORKSHOPS
+                    </Link>
                     {/* <Link
                         href="/resources"
                     >
                         RESOURCES
                     </Link> */}
-                    <Link href="/contact">CONTACT US</Link>
+                    <Link
+                        href="/contact"
+                        className={`${pathname === "/contact/" ? "text-persian-blue" : "text-black"}`}
+                    >
+                        CONTACT US
+                    </Link>
                 </div>
                 <button
                     className="flex justify-end lg:hidden"
