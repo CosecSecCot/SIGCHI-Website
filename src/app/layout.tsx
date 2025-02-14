@@ -16,10 +16,28 @@ const agdasima = Agdasima({
     variable: "--font-agdasima",
 });
 
+const siteTitle = "IIITD ACM SIGCHI Student Chapter";
+const siteDescription =
+    "IIITD's Special Interest Group on Computer Human Interaction (SIGCHI) is the premier international society for professionals, academics and students who are interested in human-technology and human-computer interaction (HCI).";
+
 export const metadata: Metadata = {
-    title: "IIITD SIGHI",
-    description:
-        "IIITD's Special Interest Group on Computer Human Interaction (SIGCHI)",
+    metadataBase: new URL("https://sigchi.iiitd.ac.in/"),
+    title: siteTitle,
+    description: siteDescription,
+    openGraph: {
+        type: "website",
+        url: "/",
+        title: siteTitle,
+        description: siteDescription,
+        siteName: "IIITD SIGCHI",
+        images: { url: "/banner.png" },
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: siteTitle,
+        description: siteDescription,
+        images: { url: "/banner.png" },
+    },
 };
 
 export default function RootLayout({

@@ -98,8 +98,8 @@ export default function MembersPage() {
                 </section>
                 <section className="mt-[62px] mb-[113px] sm:mb-[225px]">
                     <SectionHeading>SIGCHI Action Cohort</SectionHeading>
-                    <div className="w-full flex justify-start">
-                        <div className="mt-[64px] flex flex-wrap gap-[60px] justify-center lg:justify-start">
+                    <div className="w-full flex justify-center lg:justify-start">
+                        <div className="mt-[64px] flex flex-wrap gap-[60px]">
                             <MemberCard
                                 name="You"
                                 position="Waiting for you!"
