@@ -16,27 +16,31 @@ const agdasima = Agdasima({
     variable: "--font-agdasima",
 });
 
-const siteTitle = "IIITD ACM SIGCHI Student Chapter";
-const siteDescription =
-    "IIITD's Special Interest Group on Computer Human Interaction (SIGCHI) is the premier international society for professionals, academics and students who are interested in human-technology and human-computer interaction (HCI).";
+const siteMetadata = {
+    title: "IIITD ACM SIGCHI Student Chapter",
+    description:
+        "IIITD's Special Interest Group on Computer Human Interaction (SIGCHI) is the premier international society for professionals, academics and students who are interested in human-technology and human-computer interaction (HCI).",
+    url: "https://sigchi.iiitd.ac.in/",
+    image: "/banner.png",
+};
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://sigchi.iiitd.ac.in/"),
-    title: siteTitle,
-    description: siteDescription,
+    metadataBase: new URL(siteMetadata.url),
+    title: siteMetadata.title,
+    description: siteMetadata.description,
     openGraph: {
         type: "website",
-        url: "/",
-        title: siteTitle,
-        description: siteDescription,
+        url: siteMetadata.url,
+        title: siteMetadata.title,
+        description: siteMetadata.description,
         siteName: "IIITD SIGCHI",
-        images: { url: "/banner.png" },
+        images: [{ url: siteMetadata.image }],
     },
     twitter: {
         card: "summary_large_image",
-        title: siteTitle,
-        description: siteDescription,
-        images: { url: "/banner.png" },
+        title: siteMetadata.title,
+        description: siteMetadata.description,
+        images: [{ url: siteMetadata.image }],
     },
 };
 
