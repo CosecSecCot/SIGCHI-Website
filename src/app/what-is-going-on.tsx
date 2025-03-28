@@ -8,7 +8,7 @@ import img1 from "../../public/images/home/image1.svg";
 const events = [
     {
         number: "01",
-        date: "Tuesday, 25th March 2025",
+        date: "Monday, 7th April 2025",
         title: "Inauguration Event",
         subtitle: "at IIIT Delhi",
         description: "Launching our chapter with amazing activities planned",

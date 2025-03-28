@@ -52,7 +52,7 @@ export default function EventsPage() {
                     <div className="mt-[80px] flex flex-wrap gap-[64px] justify-center max-w-[1118px]">
                         <EventCard
                             style="lg"
-                            date={new Date("March 25, 2024 12:30:00")}
+                            date={new Date("April 7, 2024 12:30:00")}
                             title="IIIT Delhi SIGCHI Chapter Inauguration Event"
                             subtitle="The SIGCHI inauguration event kicks off a journey of innovation and collaboration in human-computer interaction, bringing together experts and enthusiasts to inspire new ideas and advancements in user experience design."
                             img="/images/events/image1.svg"
