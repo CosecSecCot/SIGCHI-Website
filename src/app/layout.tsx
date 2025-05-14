@@ -3,6 +3,7 @@ import { Agdasima, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import ReactLenis from "lenis/react";
 
 const barlowCondensed = Barlow_Condensed({
     weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -51,13 +52,15 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body
-                className={`${barlowCondensed.variable} ${agdasima.variable} antialiased`}
-            >
-                <Navbar />
-                {children}
-                <Footer />
-            </body>
+            <ReactLenis root>
+                <body
+                    className={`${barlowCondensed.variable} ${agdasima.variable} antialiased`}
+                >
+                    <Navbar />
+                    {children}
+                    <Footer />
+                </body>
+            </ReactLenis>
         </html>
     );
 }
