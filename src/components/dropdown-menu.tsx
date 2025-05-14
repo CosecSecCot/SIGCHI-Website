@@ -52,14 +52,27 @@ export function DropdownMenu({
     const toggleDropdown = () => {
         if (!isOpen) {
             timeline.current?.play();
+        } else {
+            timeline.current?.reverse();
         }
         setIsOpen(!isOpen);
     };
 
     return (
-        <div className="relative inline-block">
+        <div
+            onMouseOver={() => {
+                timeline.current?.play();
+                setIsOpen(true);
+            }}
+            onMouseOut={() => {
+                timeline.current?.reverse();
+                setIsOpen(false);
+            }}
+            className="relative inline-block"
+        >
             <button
                 onClick={toggleDropdown}
+                onMouseLeave={() => setIsOpen(false)}
                 className="flex items-center gap-1"
             >
                 {title}
@@ -71,7 +84,7 @@ export function DropdownMenu({
             </button>
             <div
                 ref={dropdownContainer}
-                className={`absolute ${isOpen ? "" : "hidden"} top-full -left-4 mt-6 min-w-48 bg-white border-t-persian-blue border-t-4 border border-gray-300 rounded-bl-lg rounded-br-lg shadow-lg z-40`}
+                className={`absolute top-full -left-4 mt-6 min-w-48 bg-white border-t-persian-blue border-t-4 border border-gray-300 rounded-bl-lg rounded-br-lg shadow-lg z-40`}
             >
                 <ul className="py-2">
                     {Children.map(Children.toArray(children), (child, idx) => {

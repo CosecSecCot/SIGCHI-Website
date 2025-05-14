@@ -95,8 +95,6 @@ export default function Navbar() {
 
     const pathname = usePathname();
 
-    console.log(pathname);
-
     return (
         <header className="relative w-full px-4 sm:px-9 py-8 font-barlow z-40">
             <nav className="nav-shadow-small sm:nav-shadow px-4 sm:px-11 py-4 flex justify-between items-center bg-white shadow-[#0000001a] rounded-xl">
