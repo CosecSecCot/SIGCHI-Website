@@ -21,12 +21,14 @@ export default function EventCard({
     title,
     subtitle,
     img,
+    href,
 }: {
     style?: "sm" | "lg";
     date: Date;
     title: string;
     subtitle: string;
     img: string;
+    href: string;
 }) {
     switch (style) {
         case "lg":
@@ -53,7 +55,7 @@ export default function EventCard({
                         </div>
                         <div>
                             <Link
-                                href=""
+                                href={href}
                                 className="w-fit font-agdasima text-persian-blue text-[18px] leading-[21px] sm:text-[24px] sm:leading-[28px] flex gap-[12px] hover:gap-[14px] border-b sm:border-b-2 border-b-persian-blue border-opacity-0 hover:border-opacity-100 items-center transition-all"
                             >
                                 VIEW EVENT DETAILS
@@ -76,7 +78,7 @@ export default function EventCard({
                         />
                         <div className="invisible group-hover:visible flex justify-center items-center absolute top-0 left-0 w-full h-full delay-200">
                             <Link
-                                href=""
+                                href={href}
                                 className="w-fit font-agdasima text-white text-[23px] leading-[28px] flex gap-[12px] hover:gap-[14px] border-b border-b-white"
                             >
                                 VIEW EVENT DETAILS

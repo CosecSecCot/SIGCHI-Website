@@ -56,6 +56,7 @@ export default function EventsPage() {
                             title="IIIT Delhi SIGCHI Chapter Inauguration Event"
                             subtitle="The SIGCHI inauguration event kicks off a journey of innovation and collaboration in human-computer interaction, bringing together experts and enthusiasts to inspire new ideas and advancements in user experience design."
                             img="/images/events/image1.svg"
+                            href="/events/inauguration"
                         />
                     </div>
                 </div>

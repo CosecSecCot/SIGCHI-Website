@@ -6,7 +6,7 @@
  * // Turns to
  * "Feburary 07, 2024 | 4:00PM"
  */
-export function formatDate(date: Date) {
+export function formatDate(date: Date, noTime = false) {
     const year = new Intl.DateTimeFormat("en", { year: "numeric" }).format(
         date
     );
@@ -16,6 +16,10 @@ export function formatDate(date: Date) {
         hour: "2-digit",
         minute: "2-digit",
     }).format(date);
+
+    if (noTime) {
+        return `${month} ${day}, ${year}`;
+    }
 
     return `${month} ${day}, ${year} | ${time}`;
 }
