@@ -1,3 +1,4 @@
+import Gallery from "@/components/gallery";
 import { formatDate } from "@/utils/formatting";
 import { Clock4, MapPin } from "lucide-react";
 import Image from "next/image";
@@ -188,15 +189,7 @@ export default function InaugurationEventPage() {
                         <header className="font-normal text-[38px] leading-[42px] sm:text-[66px] sm:leading-[66px]">
                             <h3>Gallery</h3>
                         </header>
-                        <div className="w-full aspect-video rounded-xl overflow-hidden">
-                            <Image
-                                src="/images/events/image1.svg"
-                                width={400}
-                                height={400}
-                                alt="IIIT Delhi SIGCHI Chapter Inauguration Event"
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
+                        <Gallery />
                     </section>
                     <section className="space-y-[1em]">
                         <header className="font-normal text-[38px] leading-[42px] sm:text-[66px] sm:leading-[66px]">
