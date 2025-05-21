@@ -211,7 +211,7 @@ export default function InaugurationEventPage() {
             </article>
             <aside className="sticky top-0 hidden lg:block min-w-[40vw] md:min-w-[30vw] h-fit pr-[80px] pt-[40px] pb-[80px] space-y-[2em]">
                 <OverviewSection />
-                <section className="space-y-[0.5em]">
+                <section className="space-y-[1.5em]">
                     <header className="font-normal text-persian-blue text-[38px] leading-[42px] sm:text-[51px] sm:leading-[56px]">
                         Tag Cloud
                     </header>
