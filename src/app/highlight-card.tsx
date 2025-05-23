@@ -53,7 +53,7 @@ export default function HighlightCard({
                     {description}
                 </p>
             </div>
-            <div className="highlight-card-image lg:flex-shrink-0 w-[25%] aspect-video rounded-md overflow-hidden">
+            <div className="highlight-card-image lg:flex-shrink-0 w-[50%] lg:w-[25%] aspect-video rounded-md overflow-hidden">
                 <Image
                     src={image}
                     alt=""

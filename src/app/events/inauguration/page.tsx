@@ -85,7 +85,7 @@ export default function InaugurationEventPage() {
                                 – Niteesh Yadav
                             </footer>
                         </blockquote>
-                        <div className="w-full aspect-video rounded-xl overflow-hidden">
+                        <div className="w-full rounded-xl overflow-hidden">
                             <Image
                                 src="/images/events/inauguration/IMG_0439.JPG"
                                 width={400}
@@ -180,7 +180,7 @@ export default function InaugurationEventPage() {
 
 function EventTag({ children }: { children: React.ReactNode }) {
     return (
-        <span className="font-agdasima text-persian-blue text-[17px] leading-[21px] sm:text-[31px] sm:leading-[31px] px-[1.25em] py-[0.25em] border-2 border-persian-blue bg-white rounded-full">
+        <span className="font-agdasima text-persian-blue text-[17px] leading-[21px] sm:text-[31px] sm:leading-[31px] px-[1.25em] py-[0.25em] border md:border-2 border-persian-blue bg-white rounded-full">
             {children}
         </span>
     );

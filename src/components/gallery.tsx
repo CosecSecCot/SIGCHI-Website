@@ -15,17 +15,27 @@ import "react-photo-album/styles.css";
 
 const slides = [
     {
-        src: "/images/events/inauguration/IMG_0418.JPG",
-        width: 6000,
-        height: 4000,
+        src: "/images/events/inauguration/IMG_3749.jpg",
+        width: 3456,
+        height: 5184,
+    },
+    {
+        src: "/images/events/inauguration/IMG_3750.jpg",
+        width: 5184,
+        height: 3456,
+    },
+    // {
+    //     src: "/images/events/inauguration/IMG_3745.jpg",
+    //     width: 5184,
+    //     height: 3456,
+    // },
+    {
+        src: "/images/events/inauguration/IMG_3771.jpg",
+        width: 5184,
+        height: 3456,
     },
     {
         src: "/images/events/inauguration/IMG_0439.JPG",
-        width: 6000,
-        height: 4000,
-    },
-    {
-        src: "/images/events/inauguration/IMG_0442.JPG",
         width: 6000,
         height: 4000,
     },
@@ -39,6 +49,21 @@ const slides = [
         width: 4000,
         height: 6000,
     },
+    {
+        src: "/images/events/inauguration/IMG_3761.jpg",
+        width: 5184,
+        height: 3456,
+    },
+    {
+        src: "/images/events/inauguration/IMG_3785.jpg",
+        width: 5184,
+        height: 3456,
+    },
+    {
+        src: "/images/events/inauguration/IMG_3773.jpg",
+        width: 3456,
+        height: 5184,
+    },
 ];
 
 export default function Gallery() {
@@ -51,7 +76,6 @@ export default function Gallery() {
                 columns={2}
                 onClick={({ index: current }) => {
                     setIndex(current);
-                    console.log(current);
                 }}
             />
             <Lightbox
