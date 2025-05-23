@@ -64,15 +64,6 @@ export default function InaugurationEventPage() {
                             ever-evolving landscape of human-computer
                             interaction.
                         </p>
-                        <div className="w-full aspect-video rounded-xl overflow-hidden">
-                            <Image
-                                src="/images/events/image1.svg"
-                                width={400}
-                                height={400}
-                                alt="IIIT Delhi SIGCHI Chapter Inauguration Event"
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
                     </section>
                     <section className="space-y-[1em]">
                         <header className="font-normal text-[38px] leading-[42px] sm:text-[66px] sm:leading-[66px]">
@@ -96,7 +87,7 @@ export default function InaugurationEventPage() {
                         </blockquote>
                         <div className="w-full aspect-video rounded-xl overflow-hidden">
                             <Image
-                                src="/images/events/image1.svg"
+                                src="/images/events/inauguration/IMG_0439.JPG"
                                 width={400}
                                 height={400}
                                 alt="IIIT Delhi SIGCHI Chapter Inauguration Event"
@@ -128,15 +119,6 @@ export default function InaugurationEventPage() {
                                 interaction
                             </li>
                         </ul>
-                        <div className="w-full aspect-video rounded-xl overflow-hidden">
-                            <Image
-                                src="/images/events/image1.svg"
-                                width={400}
-                                height={400}
-                                alt="IIIT Delhi SIGCHI Chapter Inauguration Event"
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
                     </section>
                     <section className="space-y-[1em]">
                         <header className="font-normal text-[38px] leading-[42px] sm:text-[66px] sm:leading-[66px]">
@@ -153,15 +135,6 @@ export default function InaugurationEventPage() {
                             <li>Assistive tech for accessibility</li>
                             <li>Emotion recognition systems</li>
                         </ul>
-                        <div className="w-full aspect-video rounded-xl overflow-hidden">
-                            <Image
-                                src="/images/events/image1.svg"
-                                width={400}
-                                height={400}
-                                alt="IIIT Delhi SIGCHI Chapter Inauguration Event"
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
                     </section>
                     <section className="space-y-[1em]">
                         <header className="font-normal text-[38px] leading-[42px] sm:text-[66px] sm:leading-[66px]">
@@ -175,15 +148,6 @@ export default function InaugurationEventPage() {
                             typography, and symbolic visuals made the event
                             visually striking and memorable.
                         </p>
-                        <div className="w-full aspect-video rounded-xl overflow-hidden">
-                            <Image
-                                src="/images/events/image1.svg"
-                                width={400}
-                                height={400}
-                                alt="IIIT Delhi SIGCHI Chapter Inauguration Event"
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
                     </section>
                     <section className="space-y-[1em]">
                         <header className="font-normal text-[38px] leading-[42px] sm:text-[66px] sm:leading-[66px]">
@@ -191,48 +155,15 @@ export default function InaugurationEventPage() {
                         </header>
                         <Gallery />
                     </section>
-                    <section className="space-y-[1em]">
-                        <header className="font-normal text-[38px] leading-[42px] sm:text-[66px] sm:leading-[66px]">
-                            <h3>What's Next?</h3>
-                        </header>
-                        <ul className="list-inside list-disc marker:text-persian-blue">
-                            <li>Lorem, ipsum dolor.</li>
-                            <li>Lorem ipsum dolor sit.</li>
-                            <li>Lorem, ipsum.</li>
-                            <li>Lorem ipsum dolor sit amet.</li>
-                        </ul>
-                    </section>
                 </div>
             </article>
-            <aside className="sticky top-0 hidden lg:block max-w-[50%] md:max-w-[35%] h-fit pr-[80px] pt-[40px] pb-[80px] space-y-[2em]">
+            <aside className="sticky top-0 hidden lg:block min-w-[50%] md:min-w-[35%] h-fit pr-[80px] pt-[40px] pb-[80px] space-y-[2em]">
                 <OverviewSection />
                 <section className="space-y-[1.5em]">
                     <header className="font-normal text-persian-blue text-[38px] leading-[42px] sm:text-[66px] sm:leading-[66px]">
                         Tag Cloud
                     </header>
                     <div className="flex flex-wrap gap-[0.5em]">
-                        <EventTag>Event</EventTag>
-                        <EventTag>Workshop</EventTag>
-                        <EventTag>Interactive</EventTag>
-                        <EventTag>Typography</EventTag>
-                        <EventTag>AR</EventTag>
-                        <EventTag>VR</EventTag>
-                        <EventTag>Interaction Design</EventTag>
-
-                        <EventTag>Event</EventTag>
-                        <EventTag>Workshop</EventTag>
-                        <EventTag>Interactive</EventTag>
-                        <EventTag>Typography</EventTag>
-                        <EventTag>AR</EventTag>
-                        <EventTag>VR</EventTag>
-                        <EventTag>Interaction Design</EventTag>
-                        <EventTag>Event</EventTag>
-                        <EventTag>Workshop</EventTag>
-                        <EventTag>Interactive</EventTag>
-                        <EventTag>Typography</EventTag>
-                        <EventTag>AR</EventTag>
-                        <EventTag>VR</EventTag>
-                        <EventTag>Interaction Design</EventTag>
                         <EventTag>Event</EventTag>
                         <EventTag>Workshop</EventTag>
                         <EventTag>Interactive</EventTag>

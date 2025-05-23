@@ -3,8 +3,6 @@
 import Image from "next/image";
 import HighlightCard from "@/app/highlight-card";
 
-import img1 from "../../public/images/home/image1.svg";
-
 const events = [
     {
         number: "01",
@@ -12,7 +10,7 @@ const events = [
         title: "Inauguration Event",
         subtitle: "at IIIT Delhi",
         description: "Launching our chapter with amazing activities planned",
-        image: img1,
+        image: "/images/events/inauguration/IMG_0439.JPG",
         border: true,
     },
 ];
@@ -34,13 +32,15 @@ export default function WhatIsGoingOnSection() {
                     return (
                         <HighlightCard
                             key={idx}
-                            href="/events"
+                            href="/events/inauguration"
                             number={event.number}
                             date={event.date}
                             title={event.title}
                             subtitle={event.subtitle}
                             description={event.description}
                             image={event.image}
+                            imageWidth={6000}
+                            imageHeight={4000}
                             border={event.border}
                         />
                     );

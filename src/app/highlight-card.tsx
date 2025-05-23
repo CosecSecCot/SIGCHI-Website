@@ -10,6 +10,8 @@ export default function HighlightCard({
     subtitle,
     description,
     image,
+    imageWidth,
+    imageHeight,
     border = true,
 }: {
     href: string;
@@ -18,7 +20,9 @@ export default function HighlightCard({
     title: string;
     subtitle: string;
     description: string;
-    image: StaticImport;
+    image: StaticImport | string;
+    imageWidth?: number;
+    imageHeight?: number;
     border?: boolean;
 }) {
     return (
@@ -49,8 +53,14 @@ export default function HighlightCard({
                     {description}
                 </p>
             </div>
-            <div className="highlight-card-image lg:flex-shrink-0">
-                <Image src={image} alt="" />
+            <div className="highlight-card-image lg:flex-shrink-0 w-[25%] aspect-video rounded-md overflow-hidden">
+                <Image
+                    src={image}
+                    alt=""
+                    width={imageWidth}
+                    height={imageHeight}
+                    className="object-cover"
+                />
             </div>
         </Link>
     );
